@@ -1,0 +1,10 @@
+.*.sw[op]
+*~
+
+*.bak
+*.bck
+*.kicad_pcb-bak
+
+*.net
+*.xml
+*.csv
