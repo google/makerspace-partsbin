@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SX1308
+D Both Vin pins used for XR1151, otherwise compatible with this.
+$ENDCMP
+#
+#End Doc Library
