@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP JRC-23F
+D JRC-23F, Subminiature Single Pole Relay, SPDT, 2A
+K Subminiature Single Pole Relay
+F http://www.futurlec.com/Relays/JRC-23F-03.shtml
+$ENDCMP
+#
+#End Doc Library
