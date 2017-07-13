@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name zif)(type KiCad)(uri ${KIPRJMOD}/zif.pretty)(options "")(descr ""))
+)
