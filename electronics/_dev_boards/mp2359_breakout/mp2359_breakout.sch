@@ -1,0 +1,297 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:zeropin
+LIBS:switcher-monolithicpower
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MP2359 U1
+U 1 1 5967B40E
+P 5550 3650
+F 0 "U1" H 5300 4150 60  0000 C CNN
+F 1 "MP2359" H 5550 3550 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 5550 3650 60  0001 C CNN
+F 3 "" H 5550 3650 60  0001 C CNN
+	1    5550 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L L L1
+U 1 1 5967B44A
+P 7050 3650
+F 0 "L1" V 7000 3650 50  0000 C CNN
+F 1 "L" V 7125 3650 50  0000 C CNN
+F 2 "Inductors2:L_7.3x7.3_Handsoldering" H 7050 3650 50  0001 C CNN
+F 3 "" H 7050 3650 50  0001 C CNN
+	1    7050 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C1
+U 1 1 5967B497
+P 4750 3500
+F 0 "C1" H 4775 3600 50  0000 L CNN
+F 1 "10u" H 4775 3400 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0805" H 4788 3350 50  0001 C CNN
+F 3 "" H 4750 3500 50  0001 C CNN
+	1    4750 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3350 5050 3350
+Connection ~ 4750 3350
+$Comp
+L GND #PWR1
+U 1 1 5967B56A
+P 4500 3650
+F 0 "#PWR1" H 4500 3400 50  0001 C CNN
+F 1 "GND" H 4500 3500 50  0000 C CNN
+F 2 "" H 4500 3650 50  0001 C CNN
+F 3 "" H 4500 3650 50  0001 C CNN
+	1    4500 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3650 4500 3450
+$Comp
+L GND #PWR2
+U 1 1 5967B5A0
+P 4750 3650
+F 0 "#PWR2" H 4750 3400 50  0001 C CNN
+F 1 "GND" H 4750 3500 50  0000 C CNN
+F 2 "" H 4750 3650 50  0001 C CNN
+F 3 "" H 4750 3650 50  0001 C CNN
+	1    4750 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5967B5BD
+P 5000 3650
+F 0 "R1" V 5080 3650 50  0000 C CNN
+F 1 "100k" V 5000 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4930 3650 50  0001 C CNN
+F 3 "" H 5000 3650 50  0001 C CNN
+	1    5000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3500 5000 3350
+Connection ~ 5000 3350
+Wire Wire Line
+	5000 3800 5000 3950
+Wire Wire Line
+	4350 3950 5050 3950
+$Comp
+L CONN_01X03 J1
+U 1 1 5967B69C
+P 4150 3450
+F 0 "J1" H 4150 3650 50  0000 C CNN
+F 1 "CONN_01X03" V 4250 3450 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 4150 3450 50  0001 C CNN
+F 3 "" H 4150 3450 50  0001 C CNN
+	1    4150 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3450 4350 3450
+Wire Wire Line
+	4350 3550 4350 3950
+Connection ~ 5000 3950
+$Comp
+L C C2
+U 1 1 5967B744
+P 6300 3500
+F 0 "C2" H 6325 3600 50  0000 L CNN
+F 1 "C" H 6325 3400 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0603" H 6338 3350 50  0001 C CNN
+F 3 "" H 6300 3500 50  0001 C CNN
+	1    6300 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3350 6300 3350
+Wire Wire Line
+	6050 3650 6900 3650
+$Comp
+L D_Schottky D1
+U 1 1 5967B7B1
+P 6650 3800
+F 0 "D1" H 6650 3900 50  0000 C CNN
+F 1 "D_Schottky" H 6650 3700 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMA" H 6650 3800 50  0001 C CNN
+F 3 "" H 6650 3800 50  0001 C CNN
+	1    6650 3800
+	0    1    1    0   
+$EndComp
+Connection ~ 6300 3650
+Connection ~ 6650 3650
+$Comp
+L GND #PWR3
+U 1 1 5967B8C0
+P 6650 3950
+F 0 "#PWR3" H 6650 3700 50  0001 C CNN
+F 1 "GND" H 6650 3800 50  0000 C CNN
+F 2 "" H 6650 3950 50  0001 C CNN
+F 3 "" H 6650 3950 50  0001 C CNN
+	1    6650 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5967B8E9
+P 7450 3800
+F 0 "R2" V 7530 3800 50  0000 C CNN
+F 1 "49.9k" V 7450 3800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7380 3800 50  0001 C CNN
+F 3 "" H 7450 3800 50  0001 C CNN
+	1    7450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5967B974
+P 7450 4400
+F 0 "R3" V 7530 4400 50  0000 C CNN
+F 1 "16.2k" V 7450 4400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7380 4400 50  0001 C CNN
+F 3 "" H 7450 4400 50  0001 C CNN
+	1    7450 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3950 7450 4250
+Wire Wire Line
+	6050 3950 6300 3950
+Wire Wire Line
+	6300 3950 6300 4150
+Wire Wire Line
+	6300 4150 7450 4150
+Connection ~ 7450 4150
+Wire Wire Line
+	7200 3650 8200 3650
+$Comp
+L C C3
+U 1 1 5967BA2E
+P 7850 3950
+F 0 "C3" H 7875 4050 50  0000 L CNN
+F 1 "22u" H 7875 3850 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0805" H 7888 3800 50  0001 C CNN
+F 3 "" H 7850 3950 50  0001 C CNN
+	1    7850 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J2
+U 1 1 5967BAE6
+P 8400 3700
+F 0 "J2" H 8400 3850 50  0000 C CNN
+F 1 "CONN_01X02" V 8500 3700 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8400 3700 50  0001 C CNN
+F 3 "" H 8400 3700 50  0001 C CNN
+	1    8400 3700
+	1    0    0    -1  
+$EndComp
+Connection ~ 7450 3650
+Wire Wire Line
+	7850 3650 7850 3800
+Connection ~ 7850 3650
+Wire Wire Line
+	8200 3750 8100 3750
+Wire Wire Line
+	8100 3750 8100 4200
+Wire Wire Line
+	7850 4100 7850 4200
+Wire Wire Line
+	7450 4550 7450 4650
+$Comp
+L GND #PWR4
+U 1 1 5967BBF6
+P 7450 4650
+F 0 "#PWR4" H 7450 4400 50  0001 C CNN
+F 1 "GND" H 7450 4500 50  0000 C CNN
+F 2 "" H 7450 4650 50  0001 C CNN
+F 3 "" H 7450 4650 50  0001 C CNN
+	1    7450 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR5
+U 1 1 5967BC2B
+P 7850 4200
+F 0 "#PWR5" H 7850 3950 50  0001 C CNN
+F 1 "GND" H 7850 4050 50  0000 C CNN
+F 2 "" H 7850 4200 50  0001 C CNN
+F 3 "" H 7850 4200 50  0001 C CNN
+	1    7850 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR6
+U 1 1 5967BC60
+P 8100 4200
+F 0 "#PWR6" H 8100 3950 50  0001 C CNN
+F 1 "GND" H 8100 4050 50  0000 C CNN
+F 2 "" H 8100 4200 50  0001 C CNN
+F 3 "" H 8100 4200 50  0001 C CNN
+	1    8100 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYMBOL P1
+U 1 1 5967BE8D
+P 6500 6800
+F 0 "P1" H 6500 6750 60  0000 C CNN
+F 1 "SYMBOL" H 6500 6850 60  0000 C CNN
+F 2 "Outlines:Outline_30" H 6500 6800 60  0001 C CNN
+F 3 "" H 6500 6800 60  0001 C CNN
+	1    6500 6800
+	1    0    0    -1  
+$EndComp
+Text Label 4600 3350 0    60   ~ 0
+Vin
+Text Label 6450 3650 0    60   ~ 0
+Vsw
+Text Label 7650 3650 0    60   ~ 0
+Vout
+$EndSCHEMATC

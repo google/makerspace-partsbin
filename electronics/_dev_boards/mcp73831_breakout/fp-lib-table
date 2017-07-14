@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Board_Outlines)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Board_Outlines.pretty)(options "")(descr ""))
+  (lib (name Capacitors_SMD_Round)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/Capacitors_SMD_Round.pretty)(options "")(descr ""))
+)
