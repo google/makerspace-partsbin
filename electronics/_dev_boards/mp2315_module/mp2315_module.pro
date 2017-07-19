@@ -58,4 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/Users/thatch/goog/makerspace-partsbin/electronics/_kicad_library/switcher-monolithicpower
+LibName30=../../_kicad_library/switcher-monolithicpower
