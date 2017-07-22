@@ -3,7 +3,7 @@ arduino\_micro (Arduino\_Micro.pretty)
     To treat the [Sparkfun Pro Micro](https://www.sparkfun.com/products/12640)
     as a module.
 
-buckmodule (BuckModule.pretty)
+buckmodule (Buck\_Modules.pretty)
 
     Intended for horizontal 3- or 4-pin buck converter modules that are
     compatible with 7805 pinout.  Suggested units are Murata
@@ -38,13 +38,29 @@ si4833bdy
 
     8-pin P-channel MOSFET with separate Shottky diode.
 
+switcher-ap3012
+
+    A tiny step-up converter
+
+switcher-monolithicpower
+
+    Monolithic Power ICs
+
 switcher-stm (Housings-HSSOP.pretty)
 
     STM DC-DC converters.
 
-switcher-ap3012
+switcher-suosemi
 
-    A tiny step-up converter
+    Suosemi (and compatible) DC-DC converters
+
+switcher-toppower
+
+    Toppower switching (and battery charger) ICs
+
+tlv43x
+
+    Shunt regulator for e.g. TLV431
 
 zeropin
 
@@ -63,7 +79,7 @@ zeropin
 
     A round membrane button footprint.
 
-(Polarity.pretty)
+(Polarity\_Symbols.pretty)
 
     Variously scaled barrel jack polarity symbols.
 

@@ -10,3 +10,7 @@
 *.xml
 *.csv
 .DS_Store
+
+*-fab.zip
+plot
+*_fab
