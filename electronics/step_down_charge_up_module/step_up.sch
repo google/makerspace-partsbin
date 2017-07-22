@@ -33,12 +33,11 @@ LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
 LIBS:switches
-LIBS:step_down_charge_up_module-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -79,7 +78,6 @@ Wire Wire Line
 Connection ~ 5050 3350
 Wire Wire Line
 	5200 3450 5050 3450
-Connection ~ 5050 3450
 $Comp
 L GND #PWR?
 U 1 1 596F1FC5

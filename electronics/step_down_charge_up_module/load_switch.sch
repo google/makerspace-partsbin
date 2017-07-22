@@ -33,12 +33,11 @@ LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
 LIBS:switches
-LIBS:step_down_charge_up_module-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -48,4 +47,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 3950 3450 0    60   Input ~ 0
+BOOSTED_BATT_IN
+Text HLabel 3950 3050 0    60   Input ~ 0
+WALL_IN
 $EndSCHEMATC

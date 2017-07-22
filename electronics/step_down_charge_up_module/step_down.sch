@@ -33,12 +33,11 @@ LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
 LIBS:switches
-LIBS:step_down_charge_up_module-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title ""
 Date ""
 Rev ""
