@@ -33,11 +33,12 @@ LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
 LIBS:switches
+LIBS:step_down_charge_up_module-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 6 6
 Title ""
 Date ""
 Rev ""
@@ -47,85 +48,134 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 6750 3000 0    60   ~ 0
+This MCU is good down to 2.7V\nwhen operating at 10 MHz;\nbattery protection should\nkick in before that.
 $Comp
-L MCP1703A-3002/MB U?
-U 1 1 5972F863
-P 4600 3300
-F 0 "U?" H 4750 3050 50  0000 C CNN
-F 1 "MCP1703A-3002/MB" H 4600 3450 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT89-3_Housing" H 4650 3550 50  0001 C CNN
-F 3 "" H 4600 3250 50  0001 C CNN
-	1    4600 3300
-	1    0    0    -1  
-$EndComp
-Text HLabel 3750 3300 0    60   Input ~ 0
-STANDBY_POWER
-Text Notes 3050 2450 0    60   ~ 0
-Reduce total current draw so this can be\ndirectly connected to battery, or\nadd pmos to turn it completely off\nwhen wall not present.
-Wire Wire Line
-	4300 3300 3750 3300
-Text Notes 5150 3000 0    60   ~ 0
-attiny2313 @ 10MHz works down to 2.7V\n(Provide a consistent reference less than min\nbattery voltage to make AREF easier to reason about)
-$Comp
-L ATTINY2313-20SU U?
-U 1 1 5972F8B7
-P 7100 4700
-F 0 "U?" H 6150 5700 50  0000 C CNN
-F 1 "ATTINY2313-20SU" H 7850 3800 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-20W_7.5x12.8mm_Pitch1.27mm" H 7100 4700 50  0001 C CIN
-F 3 "" H 7100 4700 50  0001 C CNN
-	1    7100 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R?
+L R R601
 U 1 1 5972F976
-P 5700 3550
-F 0 "R?" V 5780 3550 50  0000 C CNN
-F 1 "100k" V 5700 3550 50  0000 C CNN
-F 2 "" V 5630 3550 50  0001 C CNN
-F 3 "" H 5700 3550 50  0001 C CNN
-	1    5700 3550
+P 9600 4700
+F 0 "R601" V 9680 4700 50  0000 C CNN
+F 1 "100k" V 9600 4700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 9530 4700 50  0001 C CNN
+F 3 "" H 9600 4700 50  0001 C CNN
+	1    9600 4700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 3300 7100 3300
-Wire Wire Line
-	7100 3300 7100 3600
-Wire Wire Line
-	5700 3400 5700 3300
+	4900 3300 9600 3300
 Connection ~ 5700 3300
-Wire Wire Line
-	5950 3900 5700 3900
-Wire Wire Line
-	5700 3900 5700 3700
-Text Notes 7350 3550 0    60   ~ 0
-TODO see if a smaller chip will work (e.g. SO8)
-Text Notes 3050 2900 0    60   ~ 0
-Datasheet says power-down without WDT\n@ is <0.5uA (pull* resistors will dominate\noverall power draw)
 $Comp
-L GND #PWR?
+L GND #PWR028
 U 1 1 5972FB6A
-P 7100 5850
-F 0 "#PWR?" H 7100 5600 50  0001 C CNN
-F 1 "GND" H 7100 5700 50  0000 C CNN
-F 2 "" H 7100 5850 50  0001 C CNN
-F 3 "" H 7100 5850 50  0001 C CNN
-	1    7100 5850
+P 5700 5250
+F 0 "#PWR028" H 5700 5000 50  0001 C CNN
+F 1 "GND" H 5700 5100 50  0000 C CNN
+F 2 "" H 5700 5250 50  0001 C CNN
+F 3 "" H 5700 5250 50  0001 C CNN
+	1    5700 5250
+	1    0    0    -1  
+$EndComp
+Text HLabel 8500 3850 2    60   Input ~ 0
+~WAKEUP_ON_RETURN
+Text HLabel 8500 4650 2    60   Input ~ 0
+~ON_BUTTON
+Text HLabel 8500 4750 2    60   Input ~ 0
+~OFF_BUTTON
+Text HLabel 8500 3750 2    60   BiDi ~ 0
+SHUTDOWN
+Text HLabel 4900 3300 0    60   Input ~ 0
+BATT
+$Comp
+L ATTINY84-20SSU U601
+U 1 1 5973BE04
+P 7100 4350
+F 0 "U601" H 6250 5100 50  0000 C CNN
+F 1 "ATTINY84-20SSU" H 7800 3600 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7100 4150 50  0001 C CIN
+F 3 "" H 7100 4350 50  0001 C CNN
+	1    7100 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7100 5850 7100 5700
-Text HLabel 3950 4550 0    60   Input ~ 0
-~WAKEUP_ON_RETURN
-Text HLabel 3950 4850 0    60   Input ~ 0
-~ON_BUTTON
-Text HLabel 3950 5050 0    60   Input ~ 0
-~OFF_BUTTON
-Text HLabel 3950 5200 0    60   BiDi ~ 0
-SDA
-Text HLabel 3900 5500 0    60   BiDi ~ 0
+	6050 3750 5700 3750
+Wire Wire Line
+	5700 3300 5700 4200
+Wire Wire Line
+	9600 3300 9600 4550
+Wire Wire Line
+	9600 4850 9600 5100
+Wire Wire Line
+	9600 4950 8150 4950
+Wire Wire Line
+	6050 4950 5700 4950
+Wire Wire Line
+	5700 4500 5700 5250
+Wire Wire Line
+	8150 4350 8500 4350
+Text Notes 5150 3000 0    60   ~ 0
+Active power draw is <1mA\nSleep is around 0.5uA\n(Pay special attention to\npullups, here and elsewhere.)
+Text Notes 8500 3000 0    60   ~ 0
+Measure voltage by swapping\ninternal 1V1 reference and VCC\nwithout an extra pin\n(a trick that works on attiny)
+Wire Wire Line
+	8150 4150 8500 4150
+Text HLabel 8500 4150 2    60   BiDi ~ 0
 SCL
-Text HLabel 3900 5850 0    60   BiDi ~ 0
-SHUTDOWN
+Text HLabel 8500 4350 2    60   BiDi ~ 0
+SDA
+Text Notes 8850 4350 0    60   ~ 0
+Note: RasPi has pullups,\nbut include your own if\napplying on another platform
+$Comp
+L C C602
+U 1 1 5973C73D
+P 9600 5250
+F 0 "C602" H 9625 5350 50  0000 L CNN
+F 1 "0.1u" H 9625 5150 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0603" H 9638 5100 50  0001 C CNN
+F 3 "" H 9600 5250 50  0001 C CNN
+	1    9600 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C601
+U 1 1 5973C77C
+P 5700 4350
+F 0 "C601" H 5725 4450 50  0000 L CNN
+F 1 "0.1u" H 5725 4250 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0603" H 5738 4200 50  0001 C CNN
+F 3 "" H 5700 4350 50  0001 C CNN
+	1    5700 4350
+	1    0    0    -1  
+$EndComp
+Connection ~ 5700 3750
+Connection ~ 5700 4950
+$Comp
+L GND #PWR029
+U 1 1 5973C837
+P 9600 5500
+F 0 "#PWR029" H 9600 5250 50  0001 C CNN
+F 1 "GND" H 9600 5350 50  0000 C CNN
+F 2 "" H 9600 5500 50  0001 C CNN
+F 3 "" H 9600 5500 50  0001 C CNN
+	1    9600 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 5400 9600 5500
+Connection ~ 9600 4950
+Wire Wire Line
+	8500 3750 8150 3750
+Wire Wire Line
+	8500 3850 8150 3850
+Wire Wire Line
+	8500 4750 8150 4750
+Wire Wire Line
+	8150 4650 8500 4650
+Text HLabel 8500 3950 2    60   Input ~ 0
+~ON_WALL
+Wire Wire Line
+	8500 3950 8150 3950
+Text HLabel 8500 4850 2    60   Output ~ 0
+5V_EN
+Wire Wire Line
+	8500 4850 8150 4850
 $EndSCHEMATC
