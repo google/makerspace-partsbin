@@ -1,4 +1,4 @@
-update=Fri 21 Jul 2017 08:28:48 PM PDT
+update=Mon 24 Jul 2017 07:20:38 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,8 +58,9 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=../_kicad_library/switcher-monolithicpower
-LibName31=../_kicad_library/switcher-suosemi
-LibName32=../_kicad_library/tlv43x
-LibName33=../_kicad_library/mcp73831
-LibName34=switches
+LibName30=switches
+LibName31=../_kicad_library/switcher-monolithicpower
+LibName32=../_kicad_library/switcher-suosemi
+LibName33=../_kicad_library/tlv43x
+LibName34=../_kicad_library/mcp73831
+LibName35=../_kicad_library/zeropin
