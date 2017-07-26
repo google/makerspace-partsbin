@@ -1,4 +1,4 @@
-update=Sun 16 Jul 2017 09:35:25 AM PDT
+update=Tue 25 Jul 2017 05:03:20 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,7 +58,7 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/tim/kicad/kicad-ESP8266/ESP8266
-LibName31=switches
-LibName32=../_kicad_library/zeropin
-LibName33=../esp8266_therm/bmp180_breakout
+LibName30=switches
+LibName31=../_kicad_library/zeropin
+LibName32=../_kicad_library/esp8266
+LibName33=../_kicad_library/bmp180_breakout

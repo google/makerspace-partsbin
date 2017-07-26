@@ -30,8 +30,8 @@ LIBS:contrib
 LIBS:valves
 LIBS:switches
 LIBS:zeropin
+LIBS:esp8266
 LIBS:bmp180_breakout
-LIBS:esp8266_button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -354,12 +354,12 @@ $EndComp
 $Comp
 L GND #PWR012
 U 1 1 59688D0D
-P 8500 4850
-F 0 "#PWR012" H 8500 4600 50  0001 C CNN
-F 1 "GND" H 8500 4700 50  0000 C CNN
-F 2 "" H 8500 4850 50  0001 C CNN
-F 3 "" H 8500 4850 50  0001 C CNN
-	1    8500 4850
+P 8500 4650
+F 0 "#PWR012" H 8500 4400 50  0001 C CNN
+F 1 "GND" H 8500 4500 50  0000 C CNN
+F 2 "" H 8500 4650 50  0001 C CNN
+F 3 "" H 8500 4650 50  0001 C CNN
+	1    8500 4650
 	1    0    0    -1  
 $EndComp
 Text GLabel 4500 2300 1    60   Input ~ 0
@@ -551,7 +551,7 @@ U 1 1 59686907
 P 8500 3950
 F 0 "U2" H 8500 3850 50  0000 C CNN
 F 1 "ESP-12" H 8500 4050 50  0000 C CNN
-F 2 "ESP8266:ESP-12" H 8500 3950 50  0001 C CNN
+F 2 "ESP8266:ESP-12E" H 8500 3950 50  0001 C CNN
 F 3 "" H 8500 3950 50  0001 C CNN
 	1    8500 3950
 	1    0    0    -1  
@@ -684,7 +684,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 2700 8500 2850
 Wire Wire Line
-	8500 2850 8500 3050
+	8500 2850 8500 3250
 Wire Wire Line
 	8700 2850 8500 2850
 Connection ~ 8500 2850
@@ -697,30 +697,30 @@ Wire Wire Line
 Wire Wire Line
 	7000 3300 7000 3750
 Wire Wire Line
-	7000 3750 7600 3750
+	7000 3750 7750 3750
 Connection ~ 6700 3300
 Wire Wire Line
 	6700 2800 6700 2900
 Wire Wire Line
 	7400 3650 7500 3650
 Wire Wire Line
-	7500 3650 7600 3650
+	7500 3650 7750 3650
 Wire Wire Line
-	7400 3850 7600 3850
+	7400 3850 7750 3850
 Wire Wire Line
-	9400 4050 9600 4050
+	9250 4050 9600 4050
 Wire Wire Line
-	7400 4150 7600 4150
+	7400 4150 7750 4150
 Wire Wire Line
-	9400 3650 9750 3650
+	9250 3650 9750 3650
 Wire Wire Line
 	9750 3650 10150 3650
 Wire Wire Line
-	9400 3750 9850 3750
+	9250 3750 9850 3750
 Wire Wire Line
 	9850 3750 10150 3750
 Wire Wire Line
-	9400 4250 9500 4250
+	9250 4250 9500 4250
 Wire Wire Line
 	9500 4250 9600 4250
 Wire Wire Line
@@ -762,16 +762,16 @@ Wire Wire Line
 	4200 2200 4200 2450
 Connection ~ 4200 2450
 Wire Wire Line
-	7600 3950 7500 3950
+	7750 3950 7500 3950
 Wire Wire Line
 	7500 3950 7500 3650
 Connection ~ 7500 3650
 Wire Wire Line
 	9600 2750 9600 3950
 Wire Wire Line
-	9600 3950 9400 3950
+	9600 3950 9250 3950
 Wire Wire Line
-	9500 3850 9400 3850
+	9500 3850 9250 3850
 Wire Wire Line
 	9500 2550 9500 3850
 Wire Wire Line
@@ -787,9 +787,9 @@ Wire Wire Line
 Connection ~ 5650 2450
 Connection ~ 5400 2850
 Wire Wire Line
-	7600 4050 7400 4050
+	7750 4050 7400 4050
 Wire Wire Line
-	7600 4250 7400 4250
+	7750 4250 7400 4250
 Text Label 7400 3750 0    60   ~ 0
 ADC
 Wire Wire Line
@@ -802,22 +802,22 @@ Connection ~ 9750 3650
 Wire Wire Line
 	9850 3450 9850 3750
 Connection ~ 9850 3750
-Text Label 9450 3650 0    60   ~ 0
+Text Label 9300 3650 0    60   ~ 0
 TXD
-Text Label 9450 3750 0    60   ~ 0
+Text Label 9300 3750 0    60   ~ 0
 RXD
-Text Label 9400 3850 0    60   ~ 0
+Text Label 9300 3850 0    60   ~ 0
 GPIO5
-Text Label 9400 3950 0    60   ~ 0
+Text Label 9300 3950 0    60   ~ 0
 GPIO4
 Wire Wire Line
-	9400 4150 9600 4150
+	9250 4150 9600 4150
 Connection ~ 9500 4250
-Text Label 9400 4050 0    60   ~ 0
+Text Label 9300 4050 0    60   ~ 0
 GPIO0
-Text Label 9400 4150 0    60   ~ 0
+Text Label 9300 4150 0    60   ~ 0
 GPIO2
-Text Label 9400 4250 0    60   ~ 0
+Text Label 9300 4250 0    60   ~ 0
 GPIO15
 Text Notes 7850 5300 0    60   ~ 0
 Wemos D1 Mini Headers

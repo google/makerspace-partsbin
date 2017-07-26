@@ -1,7 +1,6 @@
 (fp_lib_table
   (lib (name Capacitors_SMD_Round)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Capacitors_SMD_Round.pretty)(options "")(descr ""))
-  (lib (name Battery_Holders2)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Battery_Holders2.pretty)(options "")(descr ""))
-  (lib (name Buttons)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Buttons.pretty)(options "")(descr ""))
-  (lib (name SolderJumpers)(type KiCad)(uri ${KIPRJMOD}/../../_kicad_library/SolderJumpers.pretty)(options "")(descr ""))
-  (lib (name ESP8266)(type KiCad)(uri ${KIPRJMOD}/kicad-ESP8266/ESP8266.pretty)(options "")(descr ""))
+  (lib (name Buttons)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/ESP8266.pretty)(options "")(descr ""))
+  (lib (name SolderJumpers)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/SolderJumpers.pretty)(options "")(descr ""))
+  (lib (name ESP8266)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/ESP8266.pretty)(options "")(descr ""))
 )
