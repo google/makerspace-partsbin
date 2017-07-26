@@ -28,11 +28,11 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
 LIBS:switcher-monolithicpower
 LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
-LIBS:switches
 LIBS:zeropin
 LIBS:step_down_charge_up_module-cache
 EELAYER 25 0
@@ -138,23 +138,23 @@ $EndComp
 $Comp
 L Battery_Cell BT101
 U 1 1 5972F312
-P 5000 3800
-F 0 "BT101" H 5100 3900 50  0000 L CNN
-F 1 "Battery_Cell" H 5100 3800 50  0000 L CNN
-F 2 "Connectors_JST:JST_PH_S2B-PH-K_02x2.00mm_Angled" V 5000 3860 50  0001 C CNN
-F 3 "" V 5000 3860 50  0001 C CNN
-	1    5000 3800
+P 5000 3900
+F 0 "BT101" H 5100 4000 50  0000 L CNN
+F 1 "Battery_Cell" H 5100 3900 50  0000 L CNN
+F 2 "Connectors_JST:JST_PH_S2B-PH-K_02x2.00mm_Angled" V 5000 3960 50  0001 C CNN
+F 3 "" V 5000 3960 50  0001 C CNN
+	1    5000 3900
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR104
 U 1 1 5972F3D5
-P 5000 4000
-F 0 "#PWR104" H 5000 3750 50  0001 C CNN
-F 1 "GND" H 5000 3850 50  0000 C CNN
-F 2 "" H 5000 4000 50  0001 C CNN
-F 3 "" H 5000 4000 50  0001 C CNN
-	1    5000 4000
+P 5000 4100
+F 0 "#PWR104" H 5000 3850 50  0001 C CNN
+F 1 "GND" H 5000 3950 50  0000 C CNN
+F 2 "" H 5000 4100 50  0001 C CNN
+F 3 "" H 5000 4100 50  0001 C CNN
+	1    5000 4100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -179,7 +179,7 @@ F 3 "" H 3850 4950 50  0001 C CNN
 	1    3850 4950
 	1    0    0    -1  
 $EndComp
-Text Notes 5250 4050 0    60   ~ 0
+Text Notes 5200 4150 0    60   ~ 0
 Cell must be protected\nagainst over-discharge.
 $Comp
 L SW_Push SW101
@@ -228,14 +228,14 @@ Connection ~ 2050 2750
 Wire Wire Line
 	2050 2750 1950 2750
 Wire Wire Line
-	5000 3900 5000 4000
+	5000 4000 5000 4100
 Wire Wire Line
 	4650 4900 3950 4900
 Wire Wire Line
 	3950 4900 3950 4850
 Wire Wire Line
 	3850 4850 3850 4950
-Connection ~ 5000 3550
+Connection ~ 5000 3650
 Wire Wire Line
 	6350 2750 6450 2750
 Wire Wire Line
@@ -251,10 +251,10 @@ Wire Wire Line
 	7350 5750 7350 5600
 Connection ~ 7350 5600
 $Comp
-L GND #PWR106
+L GND #PWR107
 U 1 1 59735CF0
 P 7000 6250
-F 0 "#PWR106" H 7000 6000 50  0001 C CNN
+F 0 "#PWR107" H 7000 6000 50  0001 C CNN
 F 1 "GND" H 7000 6100 50  0000 C CNN
 F 2 "" H 7000 6250 50  0001 C CNN
 F 3 "" H 7000 6250 50  0001 C CNN
@@ -262,10 +262,10 @@ F 3 "" H 7000 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR108
+L GND #PWR109
 U 1 1 59735DAD
 P 7350 6250
-F 0 "#PWR108" H 7350 6000 50  0001 C CNN
+F 0 "#PWR109" H 7350 6000 50  0001 C CNN
 F 1 "GND" H 7350 6100 50  0000 C CNN
 F 2 "" H 7350 6250 50  0001 C CNN
 F 3 "" H 7350 6250 50  0001 C CNN
@@ -276,10 +276,10 @@ Wire Wire Line
 	7350 6250 7350 6150
 Wire Wire Line
 	7000 6150 7000 6250
-Text Notes 6600 4050 0    60   ~ 0
+Text Notes 7000 3800 0    60   ~ 0
 This disables both boost converter\nand output; supervisor is powered\nfrom battery and continues with\nthis off.
 Text Notes 1800 1400 0    60   ~ 0
-TODO: Verify there is no back diode here
+TODO: Verify there is no back diode in MP2315
 Text Notes 6350 1350 0    60   ~ 0
 TODO: Verify that boost converter's diode works fine\nhere, so we only need ideal diode on WALL_IN
 $Comp
@@ -305,10 +305,10 @@ Connection ~ 6450 3100
 Wire Wire Line
 	6850 3300 6850 3450
 $Comp
-L GND #PWR105
+L GND #PWR106
 U 1 1 59739F41
 P 6850 3450
-F 0 "#PWR105" H 6850 3200 50  0001 C CNN
+F 0 "#PWR106" H 6850 3200 50  0001 C CNN
 F 1 "GND" H 6850 3300 50  0000 C CNN
 F 2 "" H 6850 3450 50  0001 C CNN
 F 3 "" H 6850 3450 50  0001 C CNN
@@ -346,9 +346,7 @@ $EndComp
 Wire Wire Line
 	7600 6250 7600 5700
 Wire Wire Line
-	3450 1900 3450 5600
-Wire Wire Line
-	4450 3550 5000 3550
+	4450 3650 5000 3650
 $Comp
 L Q_NMOS_GSD Q101
 U 1 1 5973F8AB
@@ -363,7 +361,7 @@ $EndComp
 Wire Wire Line
 	4100 5650 4100 5700
 Wire Wire Line
-	3450 5600 3750 5600
+	3300 5600 3750 5600
 Wire Wire Line
 	4050 5400 4050 5350
 Wire Wire Line
@@ -382,10 +380,10 @@ $EndComp
 Wire Wire Line
 	4050 5850 4050 5800
 Connection ~ 3450 1900
-Text Notes 3600 6400 0    60   ~ 0
-TODO: Reconsider pullup value\n(it affects charging current by uA,\nbut only while charging. Could\nprobably use built-in pullup.
+Text Notes 3550 6500 0    60   ~ 0
+TODO: Reconsider pullup value\n(it affects charging current, while\non wall, by a few uA).  Could\nprobably use built-in pullup.
 Wire Wire Line
-	6450 4150 7500 4150
+	6450 4150 7200 4150
 Wire Wire Line
 	6900 4150 6900 4800
 Wire Wire Line
@@ -415,10 +413,10 @@ F 3 "" H 8500 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR111
+L GND #PWR112
 U 1 1 59742EDA
 P 8200 3200
-F 0 "#PWR111" H 8200 2950 50  0001 C CNN
+F 0 "#PWR112" H 8200 2950 50  0001 C CNN
 F 1 "GND" H 8200 3050 50  0000 C CNN
 F 2 "" H 8200 3200 50  0001 C CNN
 F 3 "" H 8200 3200 50  0001 C CNN
@@ -510,10 +508,10 @@ F 3 "" H 7200 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR107
+L GND #PWR108
 U 1 1 59747B63
 P 7200 4850
-F 0 "#PWR107" H 7200 4600 50  0001 C CNN
+F 0 "#PWR108" H 7200 4600 50  0001 C CNN
 F 1 "GND" H 7200 4700 50  0000 C CNN
 F 2 "" H 7200 4850 50  0001 C CNN
 F 3 "" H 7200 4850 50  0001 C CNN
@@ -562,93 +560,178 @@ Wire Wire Line
 $Comp
 L R R104
 U 1 1 5974A2D9
-P 7500 4650
-F 0 "R104" V 7580 4650 50  0000 C CNN
-F 1 "1M" V 7500 4650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 7430 4650 50  0001 C CNN
-F 3 "" H 7500 4650 50  0001 C CNN
-	1    7500 4650
+P 6550 3350
+F 0 "R104" V 6630 3350 50  0000 C CNN
+F 1 "1M" V 6550 3350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6480 3350 50  0001 C CNN
+F 3 "" H 6550 3350 50  0001 C CNN
+	1    6550 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR109
+L GND #PWR105
 U 1 1 5974A3A5
-P 7500 4850
-F 0 "#PWR109" H 7500 4600 50  0001 C CNN
-F 1 "GND" H 7500 4700 50  0000 C CNN
-F 2 "" H 7500 4850 50  0001 C CNN
-F 3 "" H 7500 4850 50  0001 C CNN
-	1    7500 4850
+P 6550 3550
+F 0 "#PWR105" H 6550 3300 50  0001 C CNN
+F 1 "GND" H 6550 3400 50  0000 C CNN
+F 2 "" H 6550 3550 50  0001 C CNN
+F 3 "" H 6550 3550 50  0001 C CNN
+	1    6550 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7500 4150 7500 4500
-Connection ~ 7200 4150
+	6550 3100 6550 3200
 Wire Wire Line
-	7500 4800 7500 4850
+	6550 3500 6550 3550
 Text Notes 5200 2050 0    60   ~ 0
 TODO: Verify 2A max out
 $Comp
 L CONN_01X02 J106
 U 1 1 5974B570
-P 5200 3350
-F 0 "J106" H 5200 3500 50  0000 C CNN
-F 1 "CONN_01X02" V 5300 3350 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5200 3350 50  0001 C CNN
-F 3 "" H 5200 3350 50  0001 C CNN
-	1    5200 3350
+P 5200 3450
+F 0 "J106" H 5200 3600 50  0000 C CNN
+F 1 "CONN_01X02" V 5300 3450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5200 3450 50  0001 C CNN
+F 3 "" H 5200 3450 50  0001 C CNN
+	1    5200 3450
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_01X02 J105
 U 1 1 5974B7F2
-P 4700 3350
-F 0 "J105" H 4700 3500 50  0000 C CNN
-F 1 "CONN_01X02" V 4800 3350 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4700 3350 50  0001 C CNN
-F 3 "" H 4700 3350 50  0001 C CNN
-	1    4700 3350
+P 4700 3450
+F 0 "J105" H 4700 3600 50  0000 C CNN
+F 1 "CONN_01X02" V 4800 3450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4700 3450 50  0001 C CNN
+F 3 "" H 4700 3450 50  0001 C CNN
+	1    4700 3450
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 3400 4900 3550
-Connection ~ 4900 3550
+	4900 3500 4900 3650
+Connection ~ 4900 3650
 Wire Wire Line
-	5000 3400 5000 3600
+	5000 3500 5000 3700
 Wire Wire Line
-	5000 3300 5000 2900
+	5000 3400 5000 2900
 Wire Wire Line
 	5000 2900 5350 2900
 Wire Wire Line
-	4900 3300 4900 2900
+	4900 3400 4900 2900
 Wire Wire Line
 	4900 2900 4700 2900
 $Comp
 L CONN_01X02 J104
 U 1 1 5974C0D5
-P 4250 3750
-F 0 "J104" H 4250 3900 50  0000 C CNN
-F 1 "CONN_01X02" V 4350 3750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4250 3750 50  0001 C CNN
-F 3 "" H 4250 3750 50  0001 C CNN
-	1    4250 3750
+P 4250 3850
+F 0 "J104" H 4250 4000 50  0000 C CNN
+F 1 "CONN_01X02" V 4350 3850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4250 3850 50  0001 C CNN
+F 3 "" H 4250 3850 50  0001 C CNN
+	1    4250 3850
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4450 3700 4450 3550
-Wire Wire Line
-	4450 3800 4450 4800
-Text Notes 2050 4050 0    60   ~ 0
-TODO: Consider whether we\nwant to know when wall goes\naway, or when buck exhausts\nits output caps.
+	4450 3900 4450 4800
+Text Notes 1850 4450 0    60   ~ 0
+TODO: Evaluate choosing pre-\nor post-buck.  Q101 is only\nnecessary for pre.
 $Comp
 L SYMBOL P101
 U 1 1 5976B096
 P 6550 6800
 F 0 "P101" H 6550 6750 60  0000 C CNN
-F 1 "SYMBOL" H 6550 6850 60  0000 C CNN
+F 1 "Outline" H 6550 6850 60  0000 C CNN
 F 2 "Board_Outlines:Board_Outline_65x48mm" H 6550 6800 60  0001 C CNN
 F 3 "" H 6550 6800 60  0001 C CNN
 	1    6550 6800
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4450 3650 4450 3800
+Connection ~ 6550 3100
+Text Notes 7000 4050 0    60   ~ 0
+Be mindful of R104 contributing to\noverall draw while on.
+$Comp
+L CONN_01X03 J111
+U 1 1 597848ED
+P 2750 3800
+F 0 "J111" H 2750 4000 50  0000 C CNN
+F 1 "CONN_01X03" V 2850 3800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 2750 3800 50  0001 C CNN
+F 3 "" H 2750 3800 50  0001 C CNN
+	1    2750 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 2200 2150 3500
+Wire Wire Line
+	2150 3500 3100 3500
+Wire Wire Line
+	3100 3500 3100 3700
+Wire Wire Line
+	3100 3700 2950 3700
+Connection ~ 2150 2200
+Wire Wire Line
+	2950 3900 3450 3900
+Wire Wire Line
+	3450 3900 3450 1900
+Wire Wire Line
+	2950 3800 3300 3800
+Wire Wire Line
+	3300 3800 3300 5600
+$Comp
+L SYMBOL P102
+U 1 1 59785C73
+P 6550 7250
+F 0 "P102" H 6550 7200 60  0000 C CNN
+F 1 "OSHW" H 6550 7300 60  0000 C CNN
+F 2 "Symbols:OSHW-Logo2_9.8x8mm_SilkScreen" H 6550 7250 60  0001 C CNN
+F 3 "" H 6550 7250 60  0001 C CNN
+	1    6550 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D103
+U 1 1 59788AFF
+P 8150 5000
+F 0 "D103" H 8150 5100 50  0000 C CNN
+F 1 "LED" H 8150 4900 50  0000 C CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 8150 5000 50  0001 C CNN
+F 3 "" H 8150 5000 50  0001 C CNN
+	1    8150 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R105
+U 1 1 59788C5F
+P 8150 5400
+F 0 "R105" V 8230 5400 50  0000 C CNN
+F 1 "1k" V 8150 5400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 8080 5400 50  0001 C CNN
+F 3 "" H 8150 5400 50  0001 C CNN
+	1    8150 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5050 7500 4750
+Wire Wire Line
+	7500 4750 8150 4750
+Wire Wire Line
+	8150 4750 8150 4850
+Connection ~ 7500 5050
+Wire Wire Line
+	8150 5150 8150 5250
+$Comp
+L GND #PWR111
+U 1 1 59788F56
+P 8150 5650
+F 0 "#PWR111" H 8150 5400 50  0001 C CNN
+F 1 "GND" H 8150 5500 50  0000 C CNN
+F 2 "" H 8150 5650 50  0001 C CNN
+F 3 "" H 8150 5650 50  0001 C CNN
+	1    8150 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 5650 8150 5550
 $EndSCHEMATC

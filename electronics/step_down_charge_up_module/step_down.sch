@@ -28,11 +28,11 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
 LIBS:switcher-monolithicpower
 LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
-LIBS:switches
 LIBS:zeropin
 LIBS:step_down_charge_up_module-cache
 EELAYER 25 0
@@ -232,7 +232,7 @@ L R R205
 U 1 1 596F17FB
 P 7450 3850
 F 0 "R205" V 7530 3850 50  0000 C CNN
-F 1 "402k" V 7450 3850 50  0000 C CNN
+F 1 "40.2k" V 7450 3850 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 7380 3850 50  0001 C CNN
 F 3 "" H 7450 3850 50  0001 C CNN
 	1    7450 3850

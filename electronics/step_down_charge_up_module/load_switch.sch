@@ -28,11 +28,11 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
 LIBS:switcher-monolithicpower
 LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
-LIBS:switches
 LIBS:zeropin
 LIBS:step_down_charge_up_module-cache
 EELAYER 25 0

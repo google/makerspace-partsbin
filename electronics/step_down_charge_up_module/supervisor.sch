@@ -28,11 +28,11 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
 LIBS:switcher-monolithicpower
 LIBS:switcher-suosemi
 LIBS:tlv43x
 LIBS:mcp73831
-LIBS:switches
 LIBS:zeropin
 LIBS:step_down_charge_up_module-cache
 EELAYER 25 0
@@ -112,18 +112,18 @@ Wire Wire Line
 Wire Wire Line
 	5700 4500 5700 5250
 Wire Wire Line
-	8150 4350 8500 4350
+	8150 4350 10000 4350
 Text Notes 5150 3000 0    60   ~ 0
 Active power draw is <1mA\nSleep is around 0.5uA\n(Pay special attention to\npullups, here and elsewhere.)
 Text Notes 8500 3000 0    60   ~ 0
 Measure voltage by swapping\ninternal 1V1 reference and VCC\nwithout an extra pin\n(a trick that works on attiny)
 Wire Wire Line
-	8150 4150 8500 4150
-Text HLabel 8500 4150 2    60   BiDi ~ 0
+	8150 4150 10000 4150
+Text HLabel 10000 4150 2    60   BiDi ~ 0
 SCL
-Text HLabel 8500 4350 2    60   BiDi ~ 0
+Text HLabel 10000 4350 2    60   BiDi ~ 0
 SDA
-Text Notes 8850 4350 0    60   ~ 0
+Text Notes 9950 3900 0    60   ~ 0
 Note: RasPi has pullups,\nbut include your own if\napplying on another platform
 $Comp
 L C C602
@@ -179,4 +179,64 @@ Text HLabel 8500 4850 2    60   Output ~ 0
 5V_EN
 Wire Wire Line
 	8500 4850 8150 4850
+NoConn ~ 8150 4050
+NoConn ~ 8150 4450
+Wire Wire Line
+	8150 4250 8650 4250
+Text Label 8350 4250 0    60   ~ 0
+MISO
+Text Label 8350 4350 0    60   ~ 0
+MOSI
+Text Label 8300 3300 0    60   ~ 0
+VCC
+Text Label 8350 4950 0    60   ~ 0
+RESET
+Text Label 8350 4150 0    60   ~ 0
+SCK
+$Comp
+L CONN_02X03 J?
+U 1 1 5978A1AA
+P 7650 5750
+F 0 "J?" H 7650 5950 50  0000 C CNN
+F 1 "CONN_02X03" H 7650 5550 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 7650 4550 50  0001 C CNN
+F 3 "" H 7650 4550 50  0001 C CNN
+	1    7650 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 5650 7100 5650
+Wire Wire Line
+	7100 5750 7400 5750
+Wire Wire Line
+	7400 5850 7100 5850
+Wire Wire Line
+	7900 5750 8250 5750
+Wire Wire Line
+	7900 5650 8250 5650
+Wire Wire Line
+	7900 5850 8050 5850
+Wire Wire Line
+	8050 5850 8050 5950
+$Comp
+L GND #PWR?
+U 1 1 5978A2CB
+P 8050 5950
+F 0 "#PWR?" H 8050 5700 50  0001 C CNN
+F 1 "GND" H 8050 5800 50  0000 C CNN
+F 2 "" H 8050 5950 50  0001 C CNN
+F 3 "" H 8050 5950 50  0001 C CNN
+	1    8050 5950
+	1    0    0    -1  
+$EndComp
+Text Label 7950 5650 0    60   ~ 0
+VCC
+Text Label 7950 5750 0    60   ~ 0
+MOSI
+Text Label 7150 5650 0    60   ~ 0
+MISO
+Text Label 7150 5750 0    60   ~ 0
+SCK
+Text Label 7150 5850 0    60   ~ 0
+RESET
 $EndSCHEMATC
