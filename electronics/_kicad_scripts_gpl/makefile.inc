@@ -6,9 +6,12 @@
 
 %-fab.zip : %-fab.kicad_pcb
 	python2 $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))/kicad-fab.py $<
-	# TODO remove extensions for compat with allpcb (one of gerbview,gerbv also complains)
+	# The program gerbv (and board house allpcb) complain about gerber extension
+	# lines, which start with '%TF'.  It's in the standard, but I don't know any
+	# good reason to keep them.
+	sed -i '/^%TF/d' plot/*
 	zip -r $@ plot/
-	ln -sf plot $*_fab || true
+	[[ -e $*_fab ]] || ln -sf plot $*_fab
 
 %-fab.kicad_pcb : %.kicad_pcb
 	sed "s/%%gitversion%%/`git log --date=short --pretty=format:'%h@%cd' -n 1 $^`/" < $^ > $@
