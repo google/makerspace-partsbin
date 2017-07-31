@@ -138,12 +138,12 @@ $EndComp
 $Comp
 L Battery_Cell BT101
 U 1 1 5972F312
-P 5000 3900
-F 0 "BT101" H 5100 4000 50  0000 L CNN
-F 1 "Battery_Cell" H 5100 3900 50  0000 L CNN
-F 2 "Connectors_JST:JST_PH_S2B-PH-K_02x2.00mm_Angled" V 5000 3960 50  0001 C CNN
-F 3 "" V 5000 3960 50  0001 C CNN
-	1    5000 3900
+P 5000 3950
+F 0 "BT101" H 5100 4050 50  0000 L CNN
+F 1 "Battery_Cell" H 5100 3950 50  0000 L CNN
+F 2 "Connectors_JST:JST_PH_S2B-PH-K_02x2.00mm_Angled" V 5000 4010 50  0001 C CNN
+F 3 "" V 5000 4010 50  0001 C CNN
+	1    5000 3950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -179,8 +179,8 @@ F 3 "" H 3850 4950 50  0001 C CNN
 	1    3850 4950
 	1    0    0    -1  
 $EndComp
-Text Notes 5200 4150 0    60   ~ 0
-Cell must be protected\nagainst over-discharge.
+Text Notes 5150 4450 0    60   ~ 0
+Cell must be protected\nagainst over-discharge.\nSX1308 UVLO @ 2V and\nattiny will continue draw.
 $Comp
 L SW_Push SW101
 U 1 1 59735831
@@ -204,11 +204,19 @@ F 3 "" H 7350 6150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3200 1900 7050 1900
+	3200 1900 3450 1900
 Wire Wire Line
-	1950 2200 2250 2200
+	3450 1900 7050 1900
 Wire Wire Line
-	2050 2200 2050 2400
+	1950 2200 2050 2200
+Wire Wire Line
+	2050 2200 2150 2200
+Wire Wire Line
+	2150 2200 2250 2200
+Wire Wire Line
+	2050 2200 2050 2300
+Wire Wire Line
+	2050 2300 2050 2400
 Wire Wire Line
 	2050 2400 1950 2400
 Wire Wire Line
@@ -218,7 +226,11 @@ Connection ~ 2050 2200
 Wire Wire Line
 	1950 2650 2050 2650
 Wire Wire Line
-	2050 2650 2050 2950
+	2050 2650 2050 2750
+Wire Wire Line
+	2050 2750 2050 2850
+Wire Wire Line
+	2050 2850 2050 2950
 Wire Wire Line
 	1950 2850 2050 2850
 Connection ~ 2050 2850
@@ -228,7 +240,7 @@ Connection ~ 2050 2750
 Wire Wire Line
 	2050 2750 1950 2750
 Wire Wire Line
-	5000 4000 5000 4100
+	5000 4050 5000 4100
 Wire Wire Line
 	4650 4900 3950 4900
 Wire Wire Line
@@ -243,9 +255,13 @@ Wire Wire Line
 Wire Wire Line
 	6450 2150 7050 2150
 Wire Wire Line
-	6650 5500 7600 5500
+	6650 5500 7000 5500
 Wire Wire Line
-	6650 5600 7600 5600
+	7000 5500 7600 5500
+Wire Wire Line
+	6650 5600 7350 5600
+Wire Wire Line
+	7350 5600 7600 5600
 Connection ~ 7000 5500
 Wire Wire Line
 	7350 5750 7350 5600
@@ -298,7 +314,9 @@ Wire Wire Line
 Wire Wire Line
 	6850 2450 6850 2900
 Wire Wire Line
-	6350 3100 6550 3100
+	6350 3100 6450 3100
+Wire Wire Line
+	6450 3100 6550 3100
 Wire Wire Line
 	6450 3100 6450 4150
 Connection ~ 6450 3100
@@ -317,8 +335,6 @@ F 3 "" H 6850 3450 50  0001 C CNN
 $EndComp
 Text Notes 5000 2800 1    60   ~ 0
 <- For measuring current
-Wire Wire Line
-	4700 4400 4700 4350
 Wire Wire Line
 	7000 5500 7000 5750
 $Comp
@@ -346,7 +362,9 @@ $EndComp
 Wire Wire Line
 	7600 6250 7600 5700
 Wire Wire Line
-	4450 3650 5000 3650
+	4450 3650 4900 3650
+Wire Wire Line
+	4900 3650 5000 3650
 $Comp
 L Q_NMOS_GSD Q101
 U 1 1 5973F8AB
@@ -359,13 +377,13 @@ F 3 "" H 3950 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 5650 4100 5700
-Wire Wire Line
 	3300 5600 3750 5600
 Wire Wire Line
 	4050 5400 4050 5350
 Wire Wire Line
-	4050 5350 4650 5350
+	4050 5350 4250 5350
+Wire Wire Line
+	4250 5350 4650 5350
 $Comp
 L GND #PWR103
 U 1 1 5974057C
@@ -380,10 +398,12 @@ $EndComp
 Wire Wire Line
 	4050 5850 4050 5800
 Connection ~ 3450 1900
-Text Notes 3550 6500 0    60   ~ 0
-TODO: Reconsider pullup value\n(it affects charging current, while\non wall, by a few uA).  Could\nprobably use built-in pullup.
+Text Notes 2300 6550 0    60   ~ 0
+TODO: Reconsider pullup value\n(it affects charging current, while\non wall, by a few uA).  Could\nprobably use built-in pullup.\n\nTODO: Is a pulldown necessary\non gate, or can we rely on the\nsmall resistors inside buck\nconverter block?
 Wire Wire Line
-	6450 4150 7200 4150
+	6450 4150 6900 4150
+Wire Wire Line
+	6900 4150 7200 4150
 Wire Wire Line
 	6900 4150 6900 4800
 Wire Wire Line
@@ -424,9 +444,13 @@ F 3 "" H 8200 3200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	8000 2450 8300 2450
+	8000 2450 8200 2450
 Wire Wire Line
-	8200 2450 8200 2650
+	8200 2450 8300 2450
+Wire Wire Line
+	8200 2450 8200 2550
+Wire Wire Line
+	8200 2550 8200 2650
 Wire Wire Line
 	8200 2650 8300 2650
 Wire Wire Line
@@ -436,7 +460,11 @@ Connection ~ 8200 2450
 Wire Wire Line
 	8300 2900 8200 2900
 Wire Wire Line
-	8200 2900 8200 3200
+	8200 2900 8200 3000
+Wire Wire Line
+	8200 3000 8200 3100
+Wire Wire Line
+	8200 3100 8200 3200
 Wire Wire Line
 	8300 3100 8200 3100
 Connection ~ 8200 3100
@@ -457,7 +485,9 @@ F 3 "" H 7800 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6650 5050 7600 5050
+	6650 5050 7500 5050
+Wire Wire Line
+	7500 5050 7600 5050
 Wire Wire Line
 	6650 5150 7600 5150
 Wire Wire Line
@@ -535,7 +565,9 @@ F 3 "" H 3650 2900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3450 2350 3800 2350
+	3450 2350 3650 2350
+Wire Wire Line
+	3650 2350 3800 2350
 Connection ~ 3450 2350
 $Comp
 L R R101
@@ -583,8 +615,8 @@ Wire Wire Line
 	6550 3100 6550 3200
 Wire Wire Line
 	6550 3500 6550 3550
-Text Notes 5200 2050 0    60   ~ 0
-TODO: Verify 2A max out
+Text Notes 5400 2500 0    60   ~ 0
+TODO: Verify 2A max out.\nMeasured = 1.7A
 $Comp
 L CONN_01X02 J106
 U 1 1 5974B570
@@ -611,7 +643,9 @@ Wire Wire Line
 	4900 3500 4900 3650
 Connection ~ 4900 3650
 Wire Wire Line
-	5000 3500 5000 3700
+	5000 3500 5000 3650
+Wire Wire Line
+	5000 3650 5000 3750
 Wire Wire Line
 	5000 3400 5000 2900
 Wire Wire Line
@@ -632,7 +666,9 @@ F 3 "" H 4250 3850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4450 3900 4450 4800
+	4450 3900 4450 4650
+Wire Wire Line
+	4450 4650 4450 4800
 Text Notes 1850 4450 0    60   ~ 0
 TODO: Evaluate choosing pre-\nor post-buck.  Q101 is only\nnecessary for pre.
 $Comp
@@ -674,7 +710,9 @@ Connection ~ 2150 2200
 Wire Wire Line
 	2950 3900 3450 3900
 Wire Wire Line
-	3450 3900 3450 1900
+	3450 3900 3450 2350
+Wire Wire Line
+	3450 2350 3450 1900
 Wire Wire Line
 	2950 3800 3300 3800
 Wire Wire Line
@@ -767,4 +805,6 @@ F 3 "" H 5850 7550 60  0001 C CNN
 	1    5850 7550
 	1    0    0    -1  
 $EndComp
+Text Notes 5300 1850 0    60   ~ 0
+TODO: Should we leave step_up\nenabled during normal operation\nfor faster switching?
 $EndSCHEMATC
