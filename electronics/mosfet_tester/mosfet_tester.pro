@@ -1,4 +1,4 @@
-update=6/29/2017 10:25:27 AM
+update=Tue 01 Aug 2017 04:05:21 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../_kicad_library
+LibDir=
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,3 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
+LibName30=../_kicad_library/zeropin
