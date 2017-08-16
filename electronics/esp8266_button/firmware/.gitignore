@@ -1,0 +1,8 @@
+.pioenvs
+.clang_complete
+.gcc-flags.json
+.piolibdeps
+.vscode
+.travis.yml
+.vscode/c_cpp_properties.json
+src/user_config.h
