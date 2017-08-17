@@ -1,4 +1,4 @@
-update=Tue 01 Aug 2017 04:05:21 PM PDT
+update=Thu 17 Aug 2017 12:51:17 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=../_kicad_library/zeropin
+LibName31=../_kicad_library/buckmodule
