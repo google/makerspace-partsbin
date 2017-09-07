@@ -9,8 +9,12 @@
 *.net
 *.xml
 *.csv
+
 .DS_Store
 
 *-fab.zip
 plot
 *_fab
+
+_autosave*
+_saved_*
