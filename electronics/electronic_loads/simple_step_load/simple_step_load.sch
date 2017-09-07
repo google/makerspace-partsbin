@@ -1,0 +1,551 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:switches
+LIBS:zeropin
+LIBS:simple_step_load-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X03 J3
+U 1 1 599397BD
+P 7050 3100
+F 0 "J3" H 7050 3300 50  0000 C CNN
+F 1 "CONN_01X03" V 7150 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 7050 3100 50  0001 C CNN
+F 3 "" H 7050 3100 50  0001 C CNN
+	1    7050 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 59939822
+P 6750 2650
+F 0 "R1" V 6830 2650 50  0000 C CNN
+F 1 "R" V 6750 2650 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 6680 2650 50  0001 C CNN
+F 3 "" H 6750 2650 50  0001 C CNN
+	1    6750 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3100 6750 3100
+Wire Wire Line
+	6750 3100 6750 2800
+$Comp
+L Q_NMOS_GSD Q2
+U 1 1 5993988F
+P 6350 3750
+F 0 "Q2" H 6550 3800 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 6550 3700 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 6550 3850 50  0001 C CNN
+F 3 "" H 6350 3750 50  0001 C CNN
+	1    6350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR3
+U 1 1 59939987
+P 6750 2400
+F 0 "#PWR3" H 6750 2250 50  0001 C CNN
+F 1 "VCC" H 6750 2550 50  0000 C CNN
+F 2 "" H 6750 2400 50  0001 C CNN
+F 3 "" H 6750 2400 50  0001 C CNN
+	1    6750 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 2500 6750 2400
+$Comp
+L D D1
+U 1 1 59939CBE
+P 5800 3750
+F 0 "D1" H 5800 3850 50  0000 C CNN
+F 1 "D" H 5800 3650 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-323_HandSoldering" H 5800 3750 50  0001 C CNN
+F 3 "" H 5800 3750 50  0001 C CNN
+	1    5800 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5650 3750 5550 3750
+Wire Wire Line
+	5550 3750 5550 4050
+Connection ~ 5550 4050
+Wire Wire Line
+	5950 3750 6150 3750
+Wire Wire Line
+	6050 3850 6050 3750
+Connection ~ 6050 3750
+Wire Wire Line
+	6050 4250 6050 4350
+Wire Wire Line
+	6050 4350 6450 4350
+Wire Wire Line
+	6450 3950 6450 4550
+Connection ~ 6450 4350
+$Comp
+L GND #PWR2
+U 1 1 59939DCE
+P 6450 4550
+F 0 "#PWR2" H 6450 4300 50  0001 C CNN
+F 1 "GND" H 6450 4400 50  0000 C CNN
+F 2 "" H 6450 4550 50  0001 C CNN
+F 3 "" H 6450 4550 50  0001 C CNN
+	1    6450 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3550 6450 3450
+Wire Wire Line
+	6450 3450 9500 3450
+$Comp
+L GND #PWR4
+U 1 1 59939EA8
+P 6850 3250
+F 0 "#PWR4" H 6850 3000 50  0001 C CNN
+F 1 "GND" H 6850 3100 50  0000 C CNN
+F 2 "" H 6850 3250 50  0001 C CNN
+F 3 "" H 6850 3250 50  0001 C CNN
+	1    6850 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3250 6850 3200
+Wire Wire Line
+	6850 3000 6650 3000
+Wire Wire Line
+	6650 3000 6650 3450
+Connection ~ 6650 3450
+$Comp
+L CONN_01X03 J4
+U 1 1 59939FF0
+P 7800 3100
+F 0 "J4" H 7800 3300 50  0000 C CNN
+F 1 "CONN_01X03" V 7900 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 7800 3100 50  0001 C CNN
+F 3 "" H 7800 3100 50  0001 C CNN
+	1    7800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 59939FF7
+P 7500 2650
+F 0 "R2" V 7580 2650 50  0000 C CNN
+F 1 "R" V 7500 2650 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 7430 2650 50  0001 C CNN
+F 3 "" H 7500 2650 50  0001 C CNN
+	1    7500 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3100 7500 3100
+Wire Wire Line
+	7500 3100 7500 2800
+$Comp
+L VCC #PWR5
+U 1 1 5993A000
+P 7500 2400
+F 0 "#PWR5" H 7500 2250 50  0001 C CNN
+F 1 "VCC" H 7500 2550 50  0000 C CNN
+F 2 "" H 7500 2400 50  0001 C CNN
+F 3 "" H 7500 2400 50  0001 C CNN
+	1    7500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2500 7500 2400
+$Comp
+L GND #PWR6
+U 1 1 5993A007
+P 7600 3250
+F 0 "#PWR6" H 7600 3000 50  0001 C CNN
+F 1 "GND" H 7600 3100 50  0000 C CNN
+F 2 "" H 7600 3250 50  0001 C CNN
+F 3 "" H 7600 3250 50  0001 C CNN
+	1    7600 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3250 7600 3200
+Wire Wire Line
+	7600 3000 7400 3000
+Wire Wire Line
+	7400 3000 7400 3450
+$Comp
+L CONN_01X03 J5
+U 1 1 5993A152
+P 8500 3100
+F 0 "J5" H 8500 3300 50  0000 C CNN
+F 1 "CONN_01X03" V 8600 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8500 3100 50  0001 C CNN
+F 3 "" H 8500 3100 50  0001 C CNN
+	1    8500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5993A159
+P 8200 2650
+F 0 "R3" V 8280 2650 50  0000 C CNN
+F 1 "R" V 8200 2650 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 8130 2650 50  0001 C CNN
+F 3 "" H 8200 2650 50  0001 C CNN
+	1    8200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3100 8200 3100
+Wire Wire Line
+	8200 3100 8200 2800
+$Comp
+L VCC #PWR7
+U 1 1 5993A162
+P 8200 2400
+F 0 "#PWR7" H 8200 2250 50  0001 C CNN
+F 1 "VCC" H 8200 2550 50  0000 C CNN
+F 2 "" H 8200 2400 50  0001 C CNN
+F 3 "" H 8200 2400 50  0001 C CNN
+	1    8200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2500 8200 2400
+$Comp
+L GND #PWR8
+U 1 1 5993A169
+P 8300 3250
+F 0 "#PWR8" H 8300 3000 50  0001 C CNN
+F 1 "GND" H 8300 3100 50  0000 C CNN
+F 2 "" H 8300 3250 50  0001 C CNN
+F 3 "" H 8300 3250 50  0001 C CNN
+	1    8300 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3250 8300 3200
+Wire Wire Line
+	8300 3000 8100 3000
+Wire Wire Line
+	8100 3000 8100 3450
+$Comp
+L CONN_01X03 J6
+U 1 1 5993A24C
+P 9200 3100
+F 0 "J6" H 9200 3300 50  0000 C CNN
+F 1 "CONN_01X03" V 9300 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9200 3100 50  0001 C CNN
+F 3 "" H 9200 3100 50  0001 C CNN
+	1    9200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5993A253
+P 8900 2650
+F 0 "R4" V 8980 2650 50  0000 C CNN
+F 1 "R" V 8900 2650 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 8830 2650 50  0001 C CNN
+F 3 "" H 8900 2650 50  0001 C CNN
+	1    8900 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3100 8900 3100
+Wire Wire Line
+	8900 3100 8900 2800
+$Comp
+L VCC #PWR9
+U 1 1 5993A25C
+P 8900 2400
+F 0 "#PWR9" H 8900 2250 50  0001 C CNN
+F 1 "VCC" H 8900 2550 50  0000 C CNN
+F 2 "" H 8900 2400 50  0001 C CNN
+F 3 "" H 8900 2400 50  0001 C CNN
+	1    8900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2500 8900 2400
+$Comp
+L GND #PWR10
+U 1 1 5993A263
+P 9000 3250
+F 0 "#PWR10" H 9000 3000 50  0001 C CNN
+F 1 "GND" H 9000 3100 50  0000 C CNN
+F 2 "" H 9000 3250 50  0001 C CNN
+F 3 "" H 9000 3250 50  0001 C CNN
+	1    9000 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3250 9000 3200
+Wire Wire Line
+	9000 3000 8800 3000
+Wire Wire Line
+	8800 3000 8800 3450
+$Comp
+L CONN_01X03 J7
+U 1 1 5993A304
+P 9900 3100
+F 0 "J7" H 9900 3300 50  0000 C CNN
+F 1 "CONN_01X03" V 10000 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9900 3100 50  0001 C CNN
+F 3 "" H 9900 3100 50  0001 C CNN
+	1    9900 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5993A30B
+P 9600 2650
+F 0 "R5" V 9680 2650 50  0000 C CNN
+F 1 "R" V 9600 2650 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 9530 2650 50  0001 C CNN
+F 3 "" H 9600 2650 50  0001 C CNN
+	1    9600 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 3100 9600 3100
+Wire Wire Line
+	9600 3100 9600 2800
+$Comp
+L VCC #PWR13
+U 1 1 5993A314
+P 9600 2400
+F 0 "#PWR13" H 9600 2250 50  0001 C CNN
+F 1 "VCC" H 9600 2550 50  0000 C CNN
+F 2 "" H 9600 2400 50  0001 C CNN
+F 3 "" H 9600 2400 50  0001 C CNN
+	1    9600 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 2500 9600 2400
+$Comp
+L GND #PWR14
+U 1 1 5993A31B
+P 9700 3250
+F 0 "#PWR14" H 9700 3000 50  0001 C CNN
+F 1 "GND" H 9700 3100 50  0000 C CNN
+F 2 "" H 9700 3250 50  0001 C CNN
+F 3 "" H 9700 3250 50  0001 C CNN
+	1    9700 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 3250 9700 3200
+Wire Wire Line
+	9700 3000 9500 3000
+Wire Wire Line
+	9500 3000 9500 3450
+Text Notes 4000 4650 0    60   ~ 0
+See Fig. 13, "Local pnp Turn-Off Circuit"\nhttp://www.ti.com/lit/ml/slua618/slua618.pdf
+Text Notes 7500 2000 0    60   ~ 0
+To draw approx 0.1A per slice, use\n\nR=33 at 3.3V\nR=50 at 5V
+Text Notes 7350 7500 0    60   ~ 0
+Simple Step Load
+Text Notes 8800 6850 0    60   ~ 0
+CC-BY 4.0 Intl
+Text Notes 10600 7650 0    60   ~ 0
+v1
+Text Notes 8150 7650 0    60   ~ 0
+2017-08-15
+$Comp
+L Q_PNP_BEC Q1
+U 1 1 5995EE44
+P 5950 4050
+F 0 "Q1" H 6150 4100 50  0000 L CNN
+F 1 "Q_PNP_BEC" H 6150 4000 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 6150 4150 50  0001 C CNN
+F 3 "" H 5950 4050 50  0001 C CNN
+	1    5950 4050
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 J1
+U 1 1 5995F1F4
+P 4450 4100
+F 0 "J1" H 4450 4250 50  0000 C CNN
+F 1 "CONN_01X02" V 4550 4100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4450 4100 50  0001 C CNN
+F 3 "" H 4450 4100 50  0001 C CNN
+	1    4450 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR1
+U 1 1 5995F4BB
+P 4750 4250
+F 0 "#PWR1" H 4750 4000 50  0001 C CNN
+F 1 "GND" H 4750 4100 50  0000 C CNN
+F 2 "" H 4750 4250 50  0001 C CNN
+F 3 "" H 4750 4250 50  0001 C CNN
+	1    4750 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4250 4750 4150
+Wire Wire Line
+	4750 4150 4650 4150
+$Comp
+L SW_Push SW1
+U 1 1 5995F5AD
+P 5150 3750
+F 0 "SW1" H 5200 3850 50  0000 L CNN
+F 1 "SW_Push" H 5150 3690 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm" H 5150 3950 50  0001 C CNN
+F 3 "" H 5150 3950 50  0001 C CNN
+	1    5150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J2
+U 1 1 5995F688
+P 5150 4250
+F 0 "J2" H 5150 4400 50  0000 C CNN
+F 1 "CONN_01X02" V 5250 4250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5150 4250 50  0001 C CNN
+F 3 "" H 5150 4250 50  0001 C CNN
+	1    5150 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 4050 5750 4050
+Wire Wire Line
+	5350 3750 5350 4050
+Connection ~ 5350 4050
+Wire Wire Line
+	4650 4050 5100 4050
+Wire Wire Line
+	4950 3750 4950 4050
+Connection ~ 4950 4050
+Text Notes 4200 3750 0    60   ~ 0
+Power in
+Text Notes 4700 3450 0    60   ~ 0
+Manual trigger/bypass
+$Comp
+L C C1
+U 1 1 5995F90B
+P 5150 3950
+F 0 "C1" H 5175 4050 50  0000 L CNN
+F 1 "0.1u" H 5175 3850 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0805" H 5188 3800 50  0001 C CNN
+F 3 "" H 5150 3950 50  0001 C CNN
+	1    5150 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 3950 4950 3950
+Connection ~ 4950 3950
+Wire Wire Line
+	5300 3950 5350 3950
+Connection ~ 5350 3950
+$Comp
+L SYMBOL P1
+U 1 1 5995FD40
+P 6450 6700
+F 0 "P1" H 6450 6650 60  0000 C CNN
+F 1 "Outline" H 6450 6750 60  0000 C CNN
+F 2 "Board_Outlines:Board_Outline_30mm_Square" H 6450 6700 60  0001 C CNN
+F 3 "" H 6450 6700 60  0001 C CNN
+	1    6450 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYMBOL P2
+U 1 1 5995FDA9
+P 6450 7100
+F 0 "P2" H 6450 7050 60  0000 C CNN
+F 1 "OSHW" H 6450 7150 60  0000 C CNN
+F 2 "Symbols:OSHW-Logo2_9.8x8mm_SilkScreen" H 6450 7100 60  0001 C CNN
+F 3 "" H 6450 7100 60  0001 C CNN
+	1    6450 7100
+	1    0    0    -1  
+$EndComp
+Connection ~ 7400 3450
+Connection ~ 8100 3450
+Connection ~ 8800 3450
+$Comp
+L VCC #PWR11
+U 1 1 5996037D
+P 9350 4150
+F 0 "#PWR11" H 9350 4000 50  0001 C CNN
+F 1 "VCC" H 9350 4300 50  0000 C CNN
+F 2 "" H 9350 4150 50  0001 C CNN
+F 3 "" H 9350 4150 50  0001 C CNN
+	1    9350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR12
+U 1 1 599603C1
+P 9350 4350
+F 0 "#PWR12" H 9350 4100 50  0001 C CNN
+F 1 "GND" H 9350 4200 50  0000 C CNN
+F 2 "" H 9350 4350 50  0001 C CNN
+F 3 "" H 9350 4350 50  0001 C CNN
+	1    9350 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J8
+U 1 1 59960405
+P 9650 4250
+F 0 "J8" H 9650 4400 50  0000 C CNN
+F 1 "CONN_01X02" V 9750 4250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 9650 4250 50  0001 C CNN
+F 3 "" H 9650 4250 50  0001 C CNN
+	1    9650 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 4200 9350 4200
+Wire Wire Line
+	9350 4200 9350 4150
+Wire Wire Line
+	9450 4300 9350 4300
+Wire Wire Line
+	9350 4300 9350 4350
+$EndSCHEMATC

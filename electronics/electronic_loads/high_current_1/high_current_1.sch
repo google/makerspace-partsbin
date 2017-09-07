@@ -1,0 +1,425 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:zeropin
+LIBS:buckmodule
+LIBS:mosfet_tester-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 7050 2350 1100 550 
+U 595536CF
+F0 "slice1" 60
+F1 "slice.sch" 60
+F2 "5V_REF" I L 7050 2500 60 
+F3 "VIN-" I R 8150 2750 60 
+F4 "VIN+" I R 8150 2500 60 
+F5 "Vgs" O L 7050 2750 60 
+$EndSheet
+$Comp
+L BARREL_JACK J101
+U 1 1 5955807C
+P 2350 2150
+F 0 "J101" H 2350 2345 50  0000 C CNN
+F 1 "BARREL_JACK" H 2350 1995 50  0000 C CNN
+F 2 "Connectors:BARREL_JACK" H 2350 2150 50  0001 C CNN
+F 3 "" H 2350 2150 50  0001 C CNN
+	1    2350 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR1
+U 1 1 595581A4
+P 2850 1900
+F 0 "#PWR1" H 2850 1750 50  0001 C CNN
+F 1 "+12V" H 2850 2040 50  0000 C CNN
+F 2 "" H 2850 1900 50  0001 C CNN
+F 3 "" H 2850 1900 50  0001 C CNN
+	1    2850 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR3
+U 1 1 5955821C
+P 4450 1900
+F 0 "#PWR3" H 4450 1750 50  0001 C CNN
+F 1 "+5V" H 4450 2040 50  0000 C CNN
+F 2 "" H 4450 1900 50  0001 C CNN
+F 3 "" H 4450 1900 50  0001 C CNN
+	1    4450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR2
+U 1 1 5955853E
+P 3400 2500
+F 0 "#PWR2" H 3400 2250 50  0001 C CNN
+F 1 "GND" H 3400 2350 50  0000 C CNN
+F 2 "" H 3400 2500 50  0001 C CNN
+F 3 "" H 3400 2500 50  0001 C CNN
+	1    3400 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C101
+U 1 1 595585F6
+P 3900 2250
+F 0 "C101" H 3925 2350 50  0000 L CNN
+F 1 "22u" H 3925 2150 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_1206" H 3938 2100 50  0001 C CNN
+F 3 "" H 3900 2250 50  0001 C CNN
+	1    3900 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV101
+U 1 1 59558DC6
+P 5850 4600
+F 0 "RV101" V 5675 4600 50  0000 C CNN
+F 1 "10K" V 5750 4600 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Alps_RK163_Double_Vertical" H 5850 4600 50  0001 C CNN
+F 3 "" H 5850 4600 50  0001 C CNN
+	1    5850 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR4
+U 1 1 59558EEF
+P 5850 4350
+F 0 "#PWR4" H 5850 4200 50  0001 C CNN
+F 1 "+5V" H 5850 4490 50  0000 C CNN
+F 2 "" H 5850 4350 50  0001 C CNN
+F 3 "" H 5850 4350 50  0001 C CNN
+	1    5850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR5
+U 1 1 59559020
+P 5850 4850
+F 0 "#PWR5" H 5850 4600 50  0001 C CNN
+F 1 "GND" H 5850 4700 50  0000 C CNN
+F 2 "" H 5850 4850 50  0001 C CNN
+F 3 "" H 5850 4850 50  0001 C CNN
+	1    5850 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C103
+U 1 1 595599B9
+P 6150 4800
+F 0 "C103" H 6175 4900 50  0000 L CNN
+F 1 "0.1" H 6175 4700 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0603" H 6188 4650 50  0001 C CNN
+F 3 "" H 6150 4800 50  0001 C CNN
+	1    6150 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR6
+U 1 1 59559A94
+P 6150 5000
+F 0 "#PWR6" H 6150 4750 50  0001 C CNN
+F 1 "GND" H 6150 4850 50  0000 C CNN
+F 2 "" H 6150 5000 50  0001 C CNN
+F 3 "" H 6150 5000 50  0001 C CNN
+	1    6150 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR8
+U 1 1 59555708
+P 6350 3350
+F 0 "#PWR8" H 6350 3100 50  0001 C CNN
+F 1 "GND" H 6350 3200 50  0000 C CNN
+F 2 "" H 6350 3350 50  0001 C CNN
+F 3 "" H 6350 3350 50  0001 C CNN
+	1    6350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_1x01 J103
+U 1 1 59555F63
+P 8550 2050
+F 0 "J103" H 8550 2200 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 8400 2050 50  0000 C TNN
+F 2 "Screw_Connectors:2_Pin_Quick_Fit" H 8550 1925 50  0001 C CNN
+F 3 "" H 8550 1950 50  0001 C CNN
+	1    8550 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Screw_Terminal_1x01 J104
+U 1 1 59556BAD
+P 8900 2050
+F 0 "J104" H 8900 2200 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" V 8750 2050 50  0000 C TNN
+F 2 "Screw_Connectors:2_Pin_Quick_Fit" H 8900 1925 50  0001 C CNN
+F 3 "" H 8900 1950 50  0001 C CNN
+	1    8900 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR9
+U 1 1 595F26C8
+P 8900 5650
+F 0 "#PWR9" H 8900 5400 50  0001 C CNN
+F 1 "GND" H 8900 5500 50  0000 C CNN
+F 2 "" H 8900 5650 50  0001 C CNN
+F 3 "" H 8900 5650 50  0001 C CNN
+	1    8900 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R101
+U 1 1 59810B24
+P 8900 5400
+F 0 "R101" V 8980 5400 50  0000 C CNN
+F 1 "0R" V 8900 5400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8830 5400 50  0001 C CNN
+F 3 "" H 8900 5400 50  0001 C CNN
+	1    8900 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYMBOL P101
+U 1 1 598111E9
+P 5650 6700
+F 0 "P101" H 5650 6650 60  0000 C CNN
+F 1 "OSHW" H 5650 6750 60  0000 C CNN
+F 2 "Symbols:OSHW-Logo_7.5x8mm_SilkScreen" H 5650 6700 60  0001 C CNN
+F 3 "" H 5650 6700 60  0001 C CNN
+	1    5650 6700
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 7050 3150 1100 550 
+U 59811E07
+F0 "slice2" 60
+F1 "slice.sch" 60
+F2 "5V_REF" I L 7050 3300 60 
+F3 "VIN-" I R 8150 3550 60 
+F4 "VIN+" I R 8150 3300 60 
+F5 "Vgs" O L 7050 3550 60 
+$EndSheet
+$Sheet
+S 7050 3950 1100 550 
+U 59812351
+F0 "slice3" 60
+F1 "slice.sch" 60
+F2 "5V_REF" I L 7050 4100 60 
+F3 "VIN-" I R 8150 4350 60 
+F4 "VIN+" I R 8150 4100 60 
+F5 "Vgs" O L 7050 4350 60 
+$EndSheet
+$Sheet
+S 7050 4750 1100 550 
+U 59812983
+F0 "slice4" 60
+F1 "slice.sch" 60
+F2 "5V_REF" I L 7050 4900 60 
+F3 "VIN-" I R 8150 5150 60 
+F4 "VIN+" I R 8150 4900 60 
+F5 "Vgs" O L 7050 5150 60 
+$EndSheet
+$Comp
+L +12V #PWR7
+U 1 1 59814FAE
+P 6300 2950
+F 0 "#PWR7" H 6300 2800 50  0001 C CNN
+F 1 "+12V" H 6300 3090 50  0000 C CNN
+F 2 "" H 6300 2950 50  0001 C CNN
+F 3 "" H 6300 2950 50  0001 C CNN
+	1    6300 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C102
+U 1 1 59815A08
+P 4250 2250
+F 0 "C102" H 4275 2350 50  0000 L CNN
+F 1 "0.1u" H 4275 2150 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0603" H 4288 2100 50  0001 C CNN
+F 3 "" H 4250 2250 50  0001 C CNN
+	1    4250 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J1
+U 1 1 5981A06C
+P 6050 3150
+F 0 "J1" H 6050 3350 50  0000 C CNN
+F 1 "CONN_01X03" V 6150 3150 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 6050 3150 50  0001 C CNN
+F 3 "" H 6050 3150 50  0001 C CNN
+	1    6050 3150
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 6750 2750
+NoConn ~ 6750 2850
+NoConn ~ 6750 2950
+NoConn ~ 6750 3050
+Wire Wire Line
+	2850 2050 2850 1900
+Wire Wire Line
+	4450 2050 4450 1900
+Wire Wire Line
+	3850 2050 4450 2050
+Wire Wire Line
+	2650 2150 2800 2150
+Wire Wire Line
+	2800 2150 2800 2400
+Wire Wire Line
+	2800 2400 4250 2400
+Wire Wire Line
+	3400 2400 3400 2500
+Wire Wire Line
+	2650 2250 2800 2250
+Connection ~ 2800 2250
+Connection ~ 3400 2400
+Wire Wire Line
+	3900 2100 3900 2050
+Connection ~ 3900 2050
+Wire Wire Line
+	5850 4350 5850 4450
+Wire Wire Line
+	5850 4850 5850 4750
+Wire Wire Line
+	7050 2500 6550 2500
+Wire Wire Line
+	6550 2500 6550 4900
+Wire Wire Line
+	6550 4900 7050 4900
+Wire Wire Line
+	6000 4600 6550 4600
+Wire Wire Line
+	7050 3300 6550 3300
+Connection ~ 6550 3300
+Wire Wire Line
+	7050 4100 6550 4100
+Connection ~ 6550 4100
+Wire Wire Line
+	6150 4650 6150 4600
+Connection ~ 6150 4600
+Wire Wire Line
+	6150 5000 6150 4950
+Wire Wire Line
+	8550 2250 8550 4900
+Wire Wire Line
+	8550 4900 8150 4900
+Wire Wire Line
+	8550 4100 8150 4100
+Connection ~ 8550 4100
+Wire Wire Line
+	8150 3300 8550 3300
+Connection ~ 8550 3300
+Wire Wire Line
+	8150 2500 8550 2500
+Connection ~ 8550 2500
+Wire Wire Line
+	8900 2250 8900 5250
+Wire Wire Line
+	8900 5150 8150 5150
+Wire Wire Line
+	8150 4350 8900 4350
+Connection ~ 8900 4350
+Wire Wire Line
+	8150 3550 8900 3550
+Connection ~ 8900 3550
+Wire Wire Line
+	8150 2750 8900 2750
+Connection ~ 8900 2750
+Wire Wire Line
+	7050 3550 6950 3550
+Wire Wire Line
+	6950 3550 6950 2850
+Wire Wire Line
+	6850 4350 7050 4350
+Wire Wire Line
+	6850 4350 6850 2950
+Wire Wire Line
+	6750 3050 6750 5150
+Wire Wire Line
+	6750 5150 7050 5150
+Connection ~ 6550 3150
+Wire Wire Line
+	6350 3350 6350 3250
+Wire Wire Line
+	6350 3250 6250 3250
+Connection ~ 6550 4600
+Connection ~ 8900 5150
+Wire Wire Line
+	8900 5650 8900 5550
+Wire Wire Line
+	6300 2950 6300 3050
+Wire Wire Line
+	6300 3050 6250 3050
+Wire Wire Line
+	4250 2100 4250 2050
+Connection ~ 4250 2050
+Connection ~ 3900 2400
+Wire Wire Line
+	6550 3150 6250 3150
+Wire Wire Line
+	7050 2750 6750 2750
+Wire Wire Line
+	6850 2950 6750 2950
+Wire Wire Line
+	6950 2850 6750 2850
+$Comp
+L BuckModule M1
+U 1 1 59961E07
+P 3400 2050
+F 0 "M1" H 3400 2250 60  0000 C CNN
+F 1 "BuckModule" H 3400 1850 60  0000 C CNN
+F 2 "Buck_Modules:Buck_Module_7805_Replacement_Universal" H 3400 2100 60  0001 C CNN
+F 3 "" H 3400 2100 60  0001 C CNN
+	1    3400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2000 2850 2000
+Connection ~ 2850 2000
+Wire Wire Line
+	2650 2050 2850 2050
+NoConn ~ 2950 2100
+$EndSCHEMATC
