@@ -1,28 +1,16 @@
 # Basic use
 
-![](board.png) 
+![](board_oshpark.png) 
 
 
-Assemble board.  It's intended to go into a 3d printed clamping housing, so
-there are no mounting holes.  In order to power, you need to choose:
+Assemble board.  The board itself is 40x50mm, and the mounting holes (centered)
+are 32x42mm.  You probably want a 3d printed housing for it, but you need to
+choose whether it's powered all the time (using deep sleep), or fully powers off
+unless you tap SW1.  (Close one of "DSleep" or "Button" solder jumpers.)
 
-## Always on (use deep sleep!)
+Keep GPIO12 set HIGH to power things (including the battery monitor ADC pin and
+the BMP180 header), otherwise set LOW to conserve power.
 
-1. Close JP3 (right next to battery connector)
-2. Board will be powered whenever you plug battery in
-3. To flash, hold Flash (SW3) while you reset (SW2)
+Shields based on the Wemos D1 Mini pinout should fit (though collide with SW1),
+and will also be depowered by GPIO12.
 
-## Full poweroff
-
-1. Close JP2 (back of board)
-2. Set GPIO12 to HIGH in software.  When done, set LOW.
-3. Board may power once initially, but once you turn off requires a button
-   press.
-4. To flash, hold Flash (SW3) while you turn it on (SW1).  Keep holding SW1
-   until the entire flashing is complete.
-
-## Expansion headers
-
-1. Same pinout as Wemos D1 Mini (use low profile SW1, or omit).
-2. Serial (3-pin header, pins labeled on back)
-3. BMP180 breakout (or more generally, I2C and VBAT).
