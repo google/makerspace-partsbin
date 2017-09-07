@@ -58,5 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=../_kicad_library/zeropin
-LibName31=../_kicad_library/buckmodule
+LibName30=../../_kicad_library/zeropin
+LibName31=../../_kicad_library/buckmodule
