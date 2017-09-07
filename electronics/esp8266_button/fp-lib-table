@@ -2,4 +2,6 @@
   (lib (name Capacitors_SMD_Round)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Capacitors_SMD_Round.pretty)(options "")(descr ""))
   (lib (name SolderJumpers)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/SolderJumpers.pretty)(options "")(descr ""))
   (lib (name ESP8266)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/ESP8266.pretty)(options "")(descr ""))
+  (lib (name Breakout_Modules)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Breakout_Modules.pretty)(options "")(descr ""))
+  (lib (name Pogo_Pads)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Pogo_Pads.pretty)(options "")(descr ""))
 )
