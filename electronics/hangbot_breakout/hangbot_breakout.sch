@@ -55,13 +55,13 @@ F 3 "" H 3850 2150 50  0001 C CNN
 	1    3850 3350
 	1    0    0    -1  
 $EndComp
-Text GLabel 4300 2900 2    60   Output ~ 0
-MOT_A
-Text GLabel 4300 3000 2    60   Output ~ 0
-MOT_B
-Text GLabel 4300 3100 2    60   Output ~ 0
-MOT_C
 Text GLabel 4300 3200 2    60   Output ~ 0
+MOT_A
+Text GLabel 4300 3100 2    60   Output ~ 0
+MOT_B
+Text GLabel 4300 3000 2    60   Output ~ 0
+MOT_C
+Text GLabel 4300 2900 2    60   Output ~ 0
 MOT_D
 Text GLabel 3500 3300 0    60   Output ~ 0
 LAYER_FAN_P
@@ -109,7 +109,7 @@ Connection ~ 3600 3600
 Wire Wire Line
 	4100 3700 4150 3700
 Wire Wire Line
-	4150 3700 4150 3800
+	4150 3800 4150 3700
 Wire Wire Line
 	3600 3800 4200 3800
 Connection ~ 4100 3800
@@ -121,219 +121,180 @@ Connection ~ 4150 3800
 Connection ~ 3550 3700
 Text Notes 3000 2650 0    60   ~ 0
 TODO: Find/write shrouded header footprint
-Text GLabel 6900 2550 0    60   Input ~ 0
+Text GLabel 8050 2450 0    60   Input ~ 0
 MOT_A
-Text GLabel 6900 2650 0    60   Input ~ 0
+Text GLabel 8050 2550 0    60   Input ~ 0
 MOT_B
-Text GLabel 6900 2750 0    60   Input ~ 0
+Text GLabel 8050 2650 0    60   Input ~ 0
 MOT_C
-Text GLabel 6900 2850 0    60   Input ~ 0
+Text GLabel 8050 2750 0    60   Input ~ 0
 MOT_D
 $Comp
 L CONN_01X04 J2
 U 1 1 5A4531B3
-P 7250 2700
-F 0 "J2" H 7250 2950 50  0000 C CNN
-F 1 "CONN_01X04" V 7350 2700 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 7250 2700 50  0001 C CNN
-F 3 "" H 7250 2700 50  0001 C CNN
-	1    7250 2700
+P 8400 2600
+F 0 "J2" H 8400 2850 50  0000 C CNN
+F 1 "CONN_01X04" V 8500 2600 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 8400 2600 50  0001 C CNN
+F 3 "" H 8400 2600 50  0001 C CNN
+	1    8400 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7050 2550 6900 2550
+	8200 2450 8050 2450
 Wire Wire Line
-	7050 2650 6900 2650
+	8200 2550 8050 2550
 Wire Wire Line
-	7050 2750 6900 2750
+	8200 2650 8050 2650
 Wire Wire Line
-	7050 2850 6900 2850
-Text GLabel 6900 3650 0    60   Input ~ 0
+	8200 2750 8050 2750
+Text GLabel 8050 3450 0    60   Input ~ 0
 LAYER_FAN_N
-Text GLabel 6900 3550 0    60   Input ~ 0
+Text GLabel 8050 3550 0    60   Input ~ 0
 LAYER_FAN_P
-Text GLabel 6900 4250 0    60   Input ~ 0
+Text GLabel 8050 4250 0    60   Input ~ 0
 HOT_ZONE_FAN_P
-Text GLabel 6900 4350 0    60   Input ~ 0
+Text GLabel 8050 4150 0    60   Input ~ 0
 HOT_ZONE_FAN_N
-Text GLabel 6900 4900 0    60   Input ~ 0
+Text GLabel 8050 4800 0    60   Input ~ 0
 THERMISTOR_A
-Text GLabel 6900 5000 0    60   Input ~ 0
+Text GLabel 8050 4900 0    60   Input ~ 0
 THERMISTOR_B
-Text GLabel 6900 5850 0    60   Input ~ 0
+Text GLabel 8050 5750 0    60   Input ~ 0
 HEATER_A
-Text GLabel 6900 5950 0    60   Input ~ 0
+Text GLabel 8050 5850 0    60   Input ~ 0
 HEATER_B
 $Comp
 L CONN_01X02 J3
 U 1 1 5A453492
-P 7250 3600
-F 0 "J3" H 7250 3750 50  0000 C CNN
-F 1 "CONN_01X02" V 7350 3600 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 7250 3600 50  0001 C CNN
-F 3 "" H 7250 3600 50  0001 C CNN
-	1    7250 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 J7
-U 1 1 5A4534DE
-P 7650 3600
-F 0 "J7" H 7650 3750 50  0000 C CNN
-F 1 "CONN_01X02" V 7750 3600 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 7650 3600 50  0001 C CNN
-F 3 "" H 7650 3600 50  0001 C CNN
-	1    7650 3600
+P 8400 3500
+F 0 "J3" H 8400 3650 50  0000 C CNN
+F 1 "CONN_01X02" V 8500 3500 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8400 3500 50  0001 C CNN
+F 3 "" H 8400 3500 50  0001 C CNN
+	1    8400 3500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 3550 7450 3550
-Connection ~ 7050 3550
+	8050 3450 8600 3450
+Connection ~ 8200 3450
 Wire Wire Line
-	6900 3650 7450 3650
-Connection ~ 7050 3650
+	8050 3550 8600 3550
+Connection ~ 8200 3550
 $Comp
 L CONN_01X02 J4
 U 1 1 5A4535E6
-P 7250 4300
-F 0 "J4" H 7250 4450 50  0000 C CNN
-F 1 "CONN_01X02" V 7350 4300 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 7250 4300 50  0001 C CNN
-F 3 "" H 7250 4300 50  0001 C CNN
-	1    7250 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 J8
-U 1 1 5A45361D
-P 7650 4300
-F 0 "J8" H 7650 4450 50  0000 C CNN
-F 1 "CONN_01X02" V 7750 4300 50  0000 C CNN
-F 2 "Connectors_Molex_MicroFit:Molex_MicroFit_43650-0200_2Pin" H 7650 4300 50  0001 C CNN
-F 3 "" H 7650 4300 50  0001 C CNN
-	1    7650 4300
+P 8400 4200
+F 0 "J4" H 8400 4350 50  0000 C CNN
+F 1 "CONN_01X02" V 8500 4200 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8400 4200 50  0001 C CNN
+F 3 "" H 8400 4200 50  0001 C CNN
+	1    8400 4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 4250 7450 4250
+	8050 4150 9150 4150
 Wire Wire Line
-	6900 4350 7450 4350
-Connection ~ 7050 4350
-Connection ~ 7050 4250
-Text Notes 6150 2350 0    60   ~ 0
+	8050 4250 9050 4250
+Connection ~ 8200 4250
+Connection ~ 8200 4150
+Text Notes 7300 2250 0    60   ~ 0
 Your choice of JST-XH or Molex KK100
-Text Notes 6200 3300 0    60   ~ 0
+Text Notes 7350 3200 0    60   ~ 0
 Dual fans, JST-XH or Molex KK100
-Text Notes 6300 4100 0    60   ~ 0
-JST-XH/KK100 or Micro-Fit 3.0\n(as shipped by E3D)
-Text Notes 5950 1850 0    60   ~ 0
+Text Notes 7450 3900 0    60   ~ 0
+JST-XH/KK100 or spring term
+Text Notes 7100 1750 0    60   ~ 0
 TODO: Check polarity of all fans
 $Comp
 L CONN_01X02 J5
 U 1 1 5A453AA5
-P 7250 4950
-F 0 "J5" H 7250 5100 50  0000 C CNN
-F 1 "CONN_01X02" V 7350 4950 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 7250 4950 50  0001 C CNN
-F 3 "" H 7250 4950 50  0001 C CNN
-	1    7250 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 J9
-U 1 1 5A453AAC
-P 7650 4950
-F 0 "J9" H 7650 5100 50  0000 C CNN
-F 1 "CONN_01X02" V 7750 4950 50  0000 C CNN
-F 2 "Connectors_Molex_MicroFit:Molex_MicroFit_43650-0200_2Pin" H 7650 4950 50  0001 C CNN
-F 3 "" H 7650 4950 50  0001 C CNN
-	1    7650 4950
+P 8400 4850
+F 0 "J5" H 8400 5000 50  0000 C CNN
+F 1 "CONN_01X02" V 8500 4850 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8400 4850 50  0001 C CNN
+F 3 "" H 8400 4850 50  0001 C CNN
+	1    8400 4850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 4900 7450 4900
+	8050 4800 9350 4800
 Wire Wire Line
-	6900 5000 7450 5000
-Connection ~ 7050 5000
-Connection ~ 7050 4900
-Text Notes 6300 4750 0    60   ~ 0
-JST-XH/KK100 or Micro-Fit 3.0\n(as shipped by E3D)
-Text Notes 8100 4150 0    60   ~ 0
+	8050 4900 9350 4900
+Connection ~ 8200 4900
+Connection ~ 8200 4800
+Text Notes 7450 4550 0    60   ~ 0
+JST-XH/KK100 or spring term
+Text Notes 7600 6250 0    60   ~ 0
 TODO: Verify pin size on custom MicroFit
 $Comp
-L CONN_01X02 J6
-U 1 1 5A453BDB
-P 7250 5900
-F 0 "J6" H 7250 6050 50  0000 C CNN
-F 1 "CONN_01X02" V 7350 5900 50  0000 C CNN
-F 2 "Connectors_Phoenix:PhoenixContact_MSTBA-G_02x5.08mm_Angled" H 7250 5900 50  0001 C CNN
-F 3 "" H 7250 5900 50  0001 C CNN
-	1    7250 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 J10
+L CONN_01X02 J8
 U 1 1 5A453BE2
-P 7650 5900
-F 0 "J10" H 7650 6050 50  0000 C CNN
-F 1 "CONN_01X02" V 7750 5900 50  0000 C CNN
-F 2 "Connectors_Molex_MicroFit:Molex_MicroFit_43650-0200_2Pin" H 7650 5900 50  0001 C CNN
-F 3 "" H 7650 5900 50  0001 C CNN
-	1    7650 5900
+P 8400 5800
+F 0 "J8" H 8400 5950 50  0000 C CNN
+F 1 "CONN_01X02" V 8500 5800 50  0000 C CNN
+F 2 "Connectors_Molex_MicroFit:Molex_MicroFit_43650-0200_2Pin" H 8400 5800 50  0001 C CNN
+F 3 "" H 8400 5800 50  0001 C CNN
+	1    8400 5800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 5850 7850 5850
+	8050 5750 9050 5750
 Wire Wire Line
-	6900 5950 7850 5950
-Connection ~ 7050 5950
-Connection ~ 7050 5850
+	8050 5850 9150 5850
+Text Notes 7600 5500 0    60   ~ 0
+Micro-Fit, or spring term
+Connection ~ 8200 5750
+Connection ~ 8200 5850
 $Comp
-L CONN_01X02 J11
-U 1 1 5A453C1A
-P 8050 5900
-F 0 "J11" H 8050 6050 50  0000 C CNN
-F 1 "CONN_01X02" V 8150 5900 50  0000 C CNN
-F 2 "TerminalBlocks_KF235:KF235_2Pin_3.81mm" H 8050 5900 50  0001 C CNN
-F 3 "" H 8050 5900 50  0001 C CNN
-	1    8050 5900
-	1    0    0    -1  
-$EndComp
-Text Notes 6050 5500 0    60   ~ 0
-Phoenix pluggable, 5mm screw term, MicroFit, or spring term
-Connection ~ 7450 5850
-Connection ~ 7450 5950
-$Comp
-L SYMBOL P?
-U 1 1 5A454380
-P 6450 6850
-F 0 "P?" H 6450 6800 60  0000 C CNN
-F 1 "Hole" H 6450 6900 60  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3_Pad_Via" H 6450 6850 60  0001 C CNN
-F 3 "" H 6450 6850 60  0001 C CNN
-	1    6450 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L SYMBOL P?
-U 1 1 5A4543F1
-P 6450 7300
-F 0 "P?" H 6450 7250 60  0000 C CNN
-F 1 "Hole" H 6450 7350 60  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3.2mm_M3_Pad_Via" H 6450 7300 60  0001 C CNN
-F 3 "" H 6450 7300 60  0001 C CNN
-	1    6450 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L SYMBOL P?
+L SYMBOL P1
 U 1 1 5A454486
-P 5800 6850
-F 0 "P?" H 5800 6800 60  0000 C CNN
-F 1 "OSHW" H 5800 6900 60  0000 C CNN
-F 2 "Symbols:OSHW-Logo2_9.8x8mm_SilkScreen" H 5800 6850 60  0001 C CNN
-F 3 "" H 5800 6850 60  0001 C CNN
-	1    5800 6850
+P 6550 6700
+F 0 "P1" H 6550 6650 60  0000 C CNN
+F 1 "OSHW" H 6550 6750 60  0000 C CNN
+F 2 "Symbols:OSHW-Logo2_9.8x8mm_SilkScreen" H 6550 6700 60  0001 C CNN
+F 3 "" H 6550 6700 60  0001 C CNN
+	1    6550 6700
 	1    0    0    -1  
 $EndComp
+Text Notes 5650 4350 0    60   ~ 0
+Note: Although E3D ships\na Micro-Fit connector on this,\nit won't reach to the Titan\nstepper.
+$Comp
+L Conn_01x06 J9
+U 1 1 5A4602B5
+P 9550 4800
+F 0 "J9" H 9550 5100 50  0000 C CNN
+F 1 "Conn_01x06" H 9550 4400 50  0000 C CNN
+F 2 "TerminalBlocks_TE:Spring_Horizontal_3.81mm_1-2834017-6" H 9550 4800 50  0001 C CNN
+F 3 "" H 9550 4800 50  0001 C CNN
+	1    9550 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J7
+U 1 1 5A46034F
+P 8800 3500
+F 0 "J7" H 8800 3650 50  0000 C CNN
+F 1 "CONN_01X02" V 8900 3500 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8800 3500 50  0001 C CNN
+F 3 "" H 8800 3500 50  0001 C CNN
+	1    8800 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 4600 9150 4600
+Wire Wire Line
+	9150 4600 9150 4150
+Wire Wire Line
+	9050 4250 9050 4700
+Wire Wire Line
+	9050 4700 9350 4700
+Wire Wire Line
+	9350 5100 9150 5100
+Wire Wire Line
+	9150 5100 9150 5850
+Wire Wire Line
+	9050 5750 9050 5000
+Wire Wire Line
+	9050 5000 9350 5000
 $EndSCHEMATC
