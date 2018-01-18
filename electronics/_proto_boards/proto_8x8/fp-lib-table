@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name pinstrip)(type KiCad)(uri "$(KIPRJMOD)/pinstrip.pretty")(options "")(descr ""))
+)
