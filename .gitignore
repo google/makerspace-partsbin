@@ -5,6 +5,7 @@
 *.bak
 *.bck
 *.kicad_pcb-bak
+*-cache.lib
 
 *.net
 *.xml
@@ -18,3 +19,6 @@ plot
 
 _autosave*
 _saved_*
+
+*.new
+*.old
