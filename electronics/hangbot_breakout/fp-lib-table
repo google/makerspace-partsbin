@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name Connectors_Molex_MicroFit)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Connectors_Molex_MicroFit.pretty)(options "")(descr ""))
+  (lib (name Shrouded_Headers)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Shrouded_Headers.pretty)(options "")(descr ""))
+  (lib (name TerminalBlocks_TE)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/TerminalBlocks_TE)(options "")(descr ""))
+)

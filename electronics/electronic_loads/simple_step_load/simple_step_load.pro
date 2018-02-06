@@ -1,4 +1,4 @@
-update=Mon 14 Aug 2017 12:51:02 PM PDT
+update=Thu 17 Aug 2017 12:24:57 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,15 +60,3 @@ LibName28=contrib
 LibName29=valves
 LibName30=switches
 LibName31=../_kicad_library/zeropin
-LibName32=../_kicad_library/esp8266
-LibName33=../_kicad_library/bmp180_breakout
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
