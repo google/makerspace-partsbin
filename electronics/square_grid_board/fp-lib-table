@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name OSHWA_Certification_Mark)(type KiCad)(uri "${KIPRJMOD}/../../certification-mark/templates/kicad/OSHWA_Certification_Mark.pretty")(options "")(descr ""))
+)
