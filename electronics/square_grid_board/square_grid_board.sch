@@ -39,14 +39,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "Tic Tac Toe Grid Indicator"
 Date ""
 Rev ""
 Comp ""
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "(c) Google LLC"
+Comment4 "CC-BY 4.0 International"
 $EndDescr
 $Comp
 L 5050_Serial_RGB U1

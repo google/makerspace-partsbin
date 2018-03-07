@@ -35,14 +35,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "Machine Status Indicator"
 Date ""
 Rev ""
 Comp ""
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "(c) Google LLC"
+Comment4 "CC-BY 4.0 International"
 $EndDescr
 $Comp
 L LED D1
@@ -237,4 +237,15 @@ Wire Wire Line
 Wire Wire Line
 	4900 2800 4900 2750
 Connection ~ 5000 2800
+$Comp
+L SYMBOL P5
+U 1 1 5AA05060
+P 6000 7100
+F 0 "P5" H 6000 7050 60  0000 C CNN
+F 1 "US0119" H 6000 7150 60  0000 C CNN
+F 2 "OSHWA_Certification_Mark:OSHW_Mono_0.15_Scale" H 6000 7100 60  0001 C CNN
+F 3 "" H 6000 7100 60  0001 C CNN
+	1    6000 7100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name Slots)(type KiCad)(uri ${KIPRJMOD}/../_kicad_library/Slots.pretty)(options "")(descr ""))
+  (lib (name OSHWA_Certification_Mark)(type KiCad)(uri ${KIPRJMOD}/../../../certification-mark/templates/kicad/OSHWA_Certification_Mark.pretty)(options "")(descr ""))
 )
