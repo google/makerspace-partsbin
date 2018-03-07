@@ -4,8 +4,9 @@ import re
 import sys
 
 MULT = 0
-RE = re.compile('(?:xy|at) (-?[\d.]+) (-?[\d.]+)')
-
+FIXER_RE = re.compile('(?:xy|at|size|thickness) (-?[\d.]+)(?: (-?[\d.]+))?')
+# TODO: Update tedit as wel
+MODULE_RE = re.compile(r'(\(module |reference )(\S+)')
 
 def fixer(m):
   buf = []
@@ -25,8 +26,13 @@ def main(infile, outfile, scale):
     MULT = float(scale)
     fi = open(infile)
     fo = open(outfile, 'w')
+
+    def module_fixer(m):
+        return m.group(1) + outfile[:-len('.kicad_mod')]
+
     for line in fi:
-        fo.write(RE.sub(fixer, line))
+        line = MODULE_RE.sub(module_fixer, line)
+        fo.write(FIXER_RE.sub(fixer, line))
     fi.close()
     fo.close()
 
