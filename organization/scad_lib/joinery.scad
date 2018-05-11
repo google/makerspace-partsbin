@@ -66,3 +66,25 @@ module generic_finger_negative(material_thickness, bit_size, events, hole=true) 
     }
   }
 }
+
+module hook_finger_positive(material_thickness, bit_size, events, slide=8, a=0.5, t=8, r=1.5) {
+  echo(events);
+  for(i=[0:len(events)-1]) {
+    if(events[i][0] == 1 && i < len(events)-1) {
+      x1 = events[i][1]; x2 = events[i+1][1];
+      offset(r=r) offset(delta=-r) polygon(points=[[x1, -r-1], [x1, material_thickness], [x1-slide/2, material_thickness], [x1-slide,material_thickness+a], [x1-slide, material_thickness+t], [x2-slide, material_thickness+t], [x2-slide, -r-1]], convexity=4);
+    }
+  }
+}
+
+module hook_finger_negative(material_thickness, bit_size, events, slide=8, a=0.5, t=8) {
+  for(i=[0:len(events)-1]) {
+    if((events[i][0] == 1) && i < len(events)-1) { // begin notch
+      // can we always ignore last one, or need to know width?
+      translate([events[i][1]-bit_size/2,0]) circle(d=bit_size);
+      translate([events[i][1],material_thickness-bit_size/2]) circle(d=bit_size);
+    } else if(events[i][0] == 0 && i > 0) {
+      translate([events[i][1]+bit_size/2-slide,0]) circle(d=bit_size);
+    }
+  }
+}
