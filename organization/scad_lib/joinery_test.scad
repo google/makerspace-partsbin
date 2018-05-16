@@ -1,7 +1,7 @@
-gMaterialThickness = 6.4;
+gMaterialThickness = 11.8;
 gBitSize = 4;
 gArmHoleClearance = 4;
-gArmHoleGrip = 3.3;
+gArmHoleGrip = 4;
 
 include <joinery.scad>
 

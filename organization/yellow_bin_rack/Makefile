@@ -2,4 +2,4 @@
 	openscad -o $@ $<
 
 .PHONY: all
-all: top.dxf bottom.dxf side.dxf corner_pieces.dxf
+all: top.dxf bottom.dxf side.dxf side_with_rails.dxf corner_pieces.dxf just_rails.dxf

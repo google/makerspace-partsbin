@@ -27,7 +27,11 @@ gCasterHoleSpacing = [46, 28];
 gCasterHoleSize = 6.5;
 
 back_h_finger = [[0, 0], [1, 60], [0, 120], [1, 180]];
-back_v_finger = [[0, 0], [1, 10], [0, 90], [1, 140], [0, 200+gMaterialThickness]];
+back_v_finger = [[0, 0], [1, 20], [0, 90], [1, 140], [0, 190+gMaterialThickness]];
+
+gCornerSize = 180;
+gBackFinger = [[0, 0], [1, 15], [0, 65], [1, 110], [0, 160]];
+
 
 include <../scad_lib/joinery.scad>
 
@@ -56,8 +60,8 @@ module rail_left(aesthetic_radius=5, inside_radius=gBitSize/2) {
     // I originally had it do peck drill with a 2mm bit to enlarge on drill
     // press, and did outside with 6mm bit...
     // TODO (and this requires 3d, or hacks) the counterbore
-    translate([gHoleInset,22]) circle(d=gArmHoleGrip);
-    translate([gArmHoleSpacing+gHoleInset,22]) circle(d=gArmHoleGrip);
+    translate([gHoleInset,22]) circle(d=gArmHoleGrip,$fn=32);
+    translate([gArmHoleSpacing+gHoleInset,22]) circle(d=gArmHoleGrip,$fn=32);
   }
 }
 
@@ -80,7 +84,7 @@ module rails2_upright() {
 }
 
 module handle_positive(r1=30,r2=15,r3=15,spacing=70,offset=-10) {
-  offset(r=-10,$fn=128) offset(r=10) union() {
+  offset(r=-10,$fn=256) offset(r=10) union() {
     translate([0,offset]) hull() for(x_scale=[1,-1]) scale([x_scale,1]) {
       translate([spacing/2,0]) circle(r=r1);
       translate([spacing/2+30,-30]) circle(r=r1);
@@ -91,7 +95,7 @@ module handle_positive(r1=30,r2=15,r3=15,spacing=70,offset=-10) {
 
 module handle_negative(r1=30,r2=15,spacing=60,offset=-10) {
   hull() for(x_scale=[1,-1]) scale([x_scale,1])
-    translate([spacing/2,offset]) circle(r=r2,$fn=128);
+    translate([spacing/2,offset]) circle(r=r2,$fn=256);
 }
 
 module side(aesthetic_radius=12) {
@@ -105,41 +109,43 @@ module side(aesthetic_radius=12) {
         generic_finger_positive(gBackMaterialThickness, gBitSize, mirror_events(negate_events(gBackFinger), h-gMaterialThickness*2));
     }
     translate([w,h-gMaterialThickness]) rotate([0,0,-90])
-      generic_finger_negative(gBackMaterialThickness, gBitSize, mirror_events(negate_events(gBackFinger), h-gMaterialThickness*2), hole=false, $fn=128);
+      generic_finger_negative(gBackMaterialThickness, gBitSize, mirror_events(negate_events(gBackFinger), h-gMaterialThickness*2), hole=false, $fn=32);
     translate([w/2,h]) handle_negative();
     translate([w/2,0]) handle_positive();
-    translate([40,40]) offset(r=aesthetic_radius,$fn=128) offset(r=-aesthetic_radius)
+    translate([40,40]) offset(r=aesthetic_radius,$fn=256) offset(r=-aesthetic_radius)
       square([w-80,h-80]);
 
     for(p=gTabPositions) for(x=[p,w-p])
       for(y=[0,h])
         translate([x,y]) rotate([0,0,y==0?180:0])
-          dogbone_edge_negative(gMaterialThickness, gBitSize, gTabWidth);
+          dogbone_edge_negative(gMaterialThickness, gBitSize, gTabWidth, $fn=32);
     for(p=gSideHolePositions) for(x=[p,w-p])
       for(y=[gMaterialThickness/2,h-gMaterialThickness/2])
-        translate([x,y]) circle(d=4, $fn=128);
+        translate([x,y]) circle(d=4, $fn=32);
 
     for(y=[0:6]) {
       translate([gHoleInset,-gShelfPitch*y-gShelfOffset-gMaterialThickness+h])
-        circle(d=gArmHoleClearance,$fn=128);
+        circle(d=gArmHoleClearance,$fn=32);
       translate([w-gHoleInset,-gShelfPitch*y-gShelfOffset-gMaterialThickness+h])
-        circle(d=gArmHoleClearance,$fn=128);
+        circle(d=gArmHoleClearance,$fn=32);
     }
   }
   // restore accidental dogbone
+  // TODO: Switch to event-based tabs here, which can offset/extend more easily.
   translate([w+gBackMaterialThickness-10,h-gMaterialThickness-10]) square([10,10]);
+  translate([w+gBackMaterialThickness-10,gMaterialThickness]) square([10,10]);
 }
 
 module caster_hole_pattern() {
   for(x_scale=[1,-1]) for(y_scale=[1,-1])
     scale([x_scale,y_scale]) translate([gCasterHoleSpacing[0]/2, gCasterHoleSpacing[1]/2])
-    circle(d=gCasterHoleSize,$fn=128);
+    circle(d=gCasterHoleSize,$fn=256);
 }
 
 module top(handle_cutout=false) {
   w=gDepth;
   h=gInsideWidth;
-  $fn=128;
+  $fn=256;
   translate([0,gMaterialThickness]) difference() {
     union() {
       square([w,h]);
@@ -195,10 +201,8 @@ module all() {
 }
 
 
-gCornerSize = 190;
-gBackFinger = [[0, 0], [1, 25], [0, 75], [1, 125], [0, 175]];
-
 module back_corner() {
+  $fn=32;
   difference() {
     union() {
       hull() {
@@ -216,7 +220,7 @@ module back_corner() {
 
 module back_corner_pair() {
   back_corner();
-  translate([gCornerSize+10, gCornerSize]) rotate([0,0,180]) back_corner();
+  translate([gCornerSize-17, gCornerSize+27]) rotate([0,0,180]) back_corner();
 }
 
 module back_half() {
