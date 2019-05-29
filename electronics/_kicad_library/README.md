@@ -86,3 +86,9 @@ zeropin
 (SolderJumpers.pretty)
 
     Solder jumpers.
+
+(Connectors\_USB2.pretty)
+
+    USB Connectors (in testing, may send PR upstream).
+
+    These came from https://github.com/thatch/Connectors_USB.pretty

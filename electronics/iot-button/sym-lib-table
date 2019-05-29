@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name esp32)(type Legacy)(uri ${KIPRJMOD}/../_kicad_library/esp32.lib)(options "")(descr ""))
+  (lib (name ch340)(type Legacy)(uri ${KIPRJMOD}/../_kicad_library/ch340.lib)(options "")(descr ""))
+  (lib (name zeropin)(type Legacy)(uri ${KIPRJMOD}/../_kicad_library/zeropin.lib)(options "")(descr ""))
+  (lib (name ws2812)(type Legacy)(uri ${KIPRJMOD}/../_kicad_library/ws2812.lib)(options "")(descr ""))
+  (lib (name switcher-toppower)(type Legacy)(uri ${KIPRJMOD}/../_kicad_library/switcher-toppower.lib)(options "")(descr ""))
+)

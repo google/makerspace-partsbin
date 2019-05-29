@@ -1,0 +1,368 @@
+EESchema Schematic File Version 4
+LIBS:esp32_button-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "(c) 2017-2019 Google"
+Comment3 "CC-BY 4.0 International"
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_OTG J401
+U 1 1 59E66EE5
+P 2800 3500
+F 0 "J401" H 2600 3950 50  0000 L CNN
+F 1 "USB_OTG" H 2600 3850 50  0000 L CNN
+F 2 "Connectors_USB2:USB_Micro-B_Amphenol-10118194-0001LF_CircularHoles" H 2950 3450 50  0001 C CNN
+F 3 "" H 2950 3450 50  0001 C CNN
+F 4 "10118194-0001LF" H 2800 3500 60  0001 C CNN "MPN"
+	1    2800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L ch340:CH340G U401
+U 1 1 59E67671
+P 4800 3500
+AR Path="/59E67671" Ref="U401"  Part="1" 
+AR Path="/59E66ED4/59E67671" Ref="U301"  Part="1" 
+F 0 "U301" H 4450 4050 60  0000 C CNN
+F 1 "CH340C" H 4800 3500 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 4800 3400 60  0001 C CNN
+F 3 "" H 4800 3400 60  0001 C CNN
+	1    4800 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3500 4100 3500
+Wire Wire Line
+	4100 3600 3100 3600
+NoConn ~ 3100 3700
+Wire Wire Line
+	2800 3900 2800 4150
+$Comp
+L power:GND #PWR07
+U 1 1 59E67781
+P 2800 4400
+F 0 "#PWR07" H 2800 4150 50  0001 C CNN
+F 1 "GND" H 2800 4250 50  0000 C CNN
+F 2 "" H 2800 4400 50  0001 C CNN
+F 3 "" H 2800 4400 50  0001 C CNN
+	1    2800 4400
+	1    0    0    -1  
+$EndComp
+Text HLabel 2050 2850 0    60   Output ~ 0
+USB5V
+Wire Wire Line
+	4800 2450 4800 2900
+Text HLabel 4000 3300 0    60   Input ~ 0
+TXD
+Text HLabel 4000 3200 0    60   Input ~ 0
+RXD
+Wire Wire Line
+	4000 3300 4100 3300
+Wire Wire Line
+	4100 3200 4000 3200
+NoConn ~ 5500 3200
+NoConn ~ 5500 3600
+NoConn ~ 5500 3500
+NoConn ~ 5500 3700
+NoConn ~ 5500 3800
+$Comp
+L Device:Q_DUAL_NPN_NPN_E1B1C2E2B2C1 Q301
+U 1 1 59E68974
+P 8300 3150
+F 0 "Q301" H 8500 3200 50  0000 L CNN
+F 1 "UMH3N" H 8500 3100 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-363_SC-70-6_Handsoldering" H 8500 3250 50  0001 C CNN
+F 3 "" H 8300 3150 50  0001 C CNN
+	1    8300 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_DUAL_NPN_NPN_E1B1C2E2B2C1 Q301
+U 2 1 59E689C3
+P 8300 3950
+F 0 "Q301" H 8500 4000 50  0000 L CNN
+F 1 "UMH3N" H 8500 3900 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-363_SC-70-6_Handsoldering" H 8500 4050 50  0001 C CNN
+F 3 "" H 8300 3950 50  0001 C CNN
+	2    8300 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 3300 5800 3300
+Wire Wire Line
+	5500 3400 5800 3400
+Wire Wire Line
+	8500 3050 8850 3050
+Wire Wire Line
+	8100 3050 7800 3050
+Wire Wire Line
+	8300 3350 8300 3400
+Wire Wire Line
+	7800 3400 8300 3400
+Text HLabel 7800 3050 0    60   Output ~ 0
+CHIP_PD
+Text HLabel 7950 3850 0    60   Output ~ 0
+IO0
+Wire Wire Line
+	8100 3850 7950 3850
+Text Label 5650 3400 0    60   ~ 0
+~DTR
+Text Label 5650 3300 0    60   ~ 0
+~RTS
+Text Label 7800 3400 0    60   ~ 0
+~DTR
+Wire Wire Line
+	8600 3400 8600 3850
+Wire Wire Line
+	8600 3850 8500 3850
+Connection ~ 8300 3400
+Wire Wire Line
+	8300 4150 8300 4300
+Text Label 8550 4300 0    60   ~ 0
+~RTS
+Wire Wire Line
+	8300 4300 8850 4300
+Wire Wire Line
+	8850 4300 8850 3050
+Text HLabel 5700 2450 2    60   Input ~ 0
+REGULATED_3V3
+Wire Wire Line
+	3700 2450 3700 3400
+Wire Wire Line
+	3700 3400 4100 3400
+Wire Notes Line
+	7050 2450 9400 2450
+Wire Notes Line
+	9400 2450 9400 4650
+Wire Notes Line
+	9400 4650 7050 4650
+Wire Notes Line
+	7050 4650 7050 2450
+Text Notes 7450 4600 0    60   ~ 0
+Based on the NodeMCU reset circuit
+$Comp
+L power:GND #PWR08
+U 1 1 59E6931B
+P 4800 4200
+F 0 "#PWR08" H 4800 3950 50  0001 C CNN
+F 1 "GND" H 4800 4050 50  0000 C CNN
+F 2 "" H 4800 4200 50  0001 C CNN
+F 3 "" H 4800 4200 50  0001 C CNN
+	1    4800 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4200 4800 4100
+NoConn ~ 4100 3700
+NoConn ~ 4100 3800
+$Comp
+L Device:C C302
+U 1 1 59E86CCB
+P 5100 2700
+AR Path="/59E86CCB" Ref="C302"  Part="1" 
+AR Path="/59E66ED4/59E86CCB" Ref="C302"  Part="1" 
+F 0 "C302" H 5125 2800 50  0000 L CNN
+F 1 "0.1u" H 5125 2600 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0603" H 5138 2550 50  0001 C CNN
+F 3 "" H 5100 2700 50  0001 C CNN
+	1    5100 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C303
+U 1 1 59E86D2B
+P 5450 2700
+AR Path="/59E86D2B" Ref="C303"  Part="1" 
+AR Path="/59E66ED4/59E86D2B" Ref="C303"  Part="1" 
+F 0 "C303" H 5475 2800 50  0000 L CNN
+F 1 "10u" H 5475 2600 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0805" H 5488 2550 50  0001 C CNN
+F 3 "" H 5450 2700 50  0001 C CNN
+F 4 "C0805C106K8PACTU" H 5450 2700 60  0001 C CNN "MPN"
+	1    5450 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2450 5450 2550
+Wire Wire Line
+	3700 2450 4800 2450
+Connection ~ 4800 2450
+Wire Wire Line
+	5100 2550 5100 2450
+Connection ~ 5100 2450
+$Comp
+L power:GND #PWR09
+U 1 1 59E86E40
+P 5100 2850
+F 0 "#PWR09" H 5100 2600 50  0001 C CNN
+F 1 "GND" H 5100 2700 50  0000 C CNN
+F 2 "" H 5100 2850 50  0001 C CNN
+F 3 "" H 5100 2850 50  0001 C CNN
+	1    5100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 59E86E6C
+P 5450 2850
+F 0 "#PWR010" H 5450 2600 50  0001 C CNN
+F 1 "GND" H 5450 2700 50  0000 C CNN
+F 2 "" H 5450 2850 50  0001 C CNN
+F 3 "" H 5450 2850 50  0001 C CNN
+	1    5450 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C301
+U 1 1 59E8706D
+P 2350 4150
+AR Path="/59E8706D" Ref="C301"  Part="1" 
+AR Path="/59E66ED4/59E8706D" Ref="C301"  Part="1" 
+F 0 "C301" H 2375 4250 50  0000 L CNN
+F 1 "4.7n" H 2375 4050 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0603" H 2388 4000 50  0001 C CNN
+F 3 "" H 2350 4150 50  0001 C CNN
+F 4 "GRM188R71H472KA01D" H 2350 4150 60  0001 C CNN "MPN"
+	1    2350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R301
+U 1 1 59E870A6
+P 2600 4150
+F 0 "R301" V 2680 4150 50  0000 C CNN
+F 1 "1M" V 2600 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2530 4150 50  0001 C CNN
+F 3 "" H 2600 4150 50  0001 C CNN
+	1    2600 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4000 2350 3950
+Wire Wire Line
+	2350 3950 2600 3950
+Wire Wire Line
+	2700 3950 2700 3900
+Wire Wire Line
+	2600 4000 2600 3950
+Connection ~ 2600 3950
+$Comp
+L power:GND #PWR011
+U 1 1 59E871BB
+P 2600 4400
+F 0 "#PWR011" H 2600 4150 50  0001 C CNN
+F 1 "GND" H 2600 4250 50  0000 C CNN
+F 2 "" H 2600 4400 50  0001 C CNN
+F 3 "" H 2600 4400 50  0001 C CNN
+	1    2600 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4300 2600 4350
+Wire Wire Line
+	2350 4300 2350 4350
+Wire Wire Line
+	2350 4350 2600 4350
+Connection ~ 2600 4350
+Text Notes 3750 4450 0    60   ~ 0
+CH340C variant\ndoes not use\nexternal xtal\nbut seems to\nstop at 115.2k
+Text Notes 3900 2350 0    60   ~ 0
+TODO: Shut off CH340 when\nno USB5V using a 74*126 on TX/RX.\n(Input higher than VCC generally is bad,\nbut 74*126 will tri-state them.)
+Text Notes 2050 4950 0    60   ~ 0
+TODO: Revisit shield connection\nafter EMI testing.  This is only\none possible approach.
+$Comp
+L power:PWR_FLAG #FLG012
+U 1 1 59F03802
+P 3150 2750
+F 0 "#FLG012" H 3150 2825 50  0001 C CNN
+F 1 "PWR_FLAG" H 3150 2900 50  0000 C CNN
+F 2 "" H 3150 2750 50  0001 C CNN
+F 3 "" H 3150 2750 50  0001 C CNN
+	1    3150 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG013
+U 1 1 59F04502
+P 3150 4100
+F 0 "#FLG013" H 3150 4175 50  0001 C CNN
+F 1 "PWR_FLAG" H 3150 4250 50  0000 C CNN
+F 2 "" H 3150 4100 50  0001 C CNN
+F 3 "" H 3150 4100 50  0001 C CNN
+	1    3150 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4100 3150 4150
+Wire Wire Line
+	3150 4150 2800 4150
+Connection ~ 2800 4150
+Text Notes 5050 4350 0    60   ~ 0
+(datasheet has\nextra -D, should be)\nTX -> RXD\nRX -> TXD\n
+$Comp
+L Device:Polyfuse F301
+U 1 1 5A03DA44
+P 2750 2850
+F 0 "F301" V 2650 2850 50  0000 C CNN
+F 1 "500mA Hold" V 2850 2850 50  0000 C CNN
+F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_HandSoldering" H 2800 2650 50  0001 L CNN
+F 3 "" H 2750 2850 50  0001 C CNN
+F 4 "0ZCJ0050FF2G" V 2750 2850 60  0001 C CNN "MPN"
+F 5 "PTS120615V050" V 2750 2850 60  0001 C CNN "MPN2"
+	1    2750 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3150 2750 3150 2850
+Wire Wire Line
+	3150 3300 3100 3300
+Wire Wire Line
+	3150 2850 2900 2850
+Connection ~ 3150 2850
+Text Label 3350 3500 0    60   ~ 0
+USB_P
+Text Label 3350 3600 0    60   ~ 0
+USB_N
+$Comp
+L Connector:TestPoint TP301
+U 1 1 5A0B0E97
+P 2250 2850
+F 0 "TP301" H 2250 3120 50  0000 C CNN
+F 1 "TEST_1P" H 2250 3050 50  0000 C CNN
+F 2 "Test_Points:Test_Point_SMD" H 2450 2850 50  0001 C CNN
+F 3 "" H 2450 2850 50  0001 C CNN
+	1    2250 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5450 2450
+Wire Wire Line
+	8300 3400 8600 3400
+Wire Wire Line
+	4800 2450 5100 2450
+Wire Wire Line
+	5100 2450 5450 2450
+Wire Wire Line
+	2600 3950 2700 3950
+Wire Wire Line
+	2600 4350 2600 4400
+Wire Wire Line
+	2800 4150 2800 4400
+Wire Wire Line
+	3150 2850 3150 3300
+Wire Wire Line
+	5450 2450 5700 2450
+Wire Wire Line
+	2050 2850 2250 2850
+Connection ~ 2250 2850
+Wire Wire Line
+	2250 2850 2600 2850
+$EndSCHEMATC

@@ -1,0 +1,419 @@
+EESchema Schematic File Version 4
+LIBS:esp32_button-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "(c) 2017-2019 Google"
+Comment3 "CC-BY 4.0 International"
+Comment4 ""
+$EndDescr
+$Comp
+L esp32:WROOM32 M401
+U 1 1 59E6A705
+P 5050 3550
+AR Path="/59E6A705" Ref="M401"  Part="1" 
+AR Path="/59E6A636/59E6A705" Ref="M401"  Part="1" 
+F 0 "M401" H 4600 4700 60  0000 C CNN
+F 1 "WROOM32" H 5050 3550 60  0000 C CNN
+F 2 "ESP32:WROOM32" H 5050 3900 60  0001 C CNN
+F 3 "" H 5050 3900 60  0001 C CNN
+	1    5050 3550
+	1    0    0    -1  
+$EndComp
+Text HLabel 3450 2600 0    60   Input ~ 0
+CHIP_PD
+Text HLabel 6000 3800 2    60   Input ~ 0
+IO0
+Wire Wire Line
+	6000 3800 5800 3800
+$Comp
+L power:GND #PWR014
+U 1 1 59E6A777
+P 5900 4850
+F 0 "#PWR014" H 5900 4600 50  0001 C CNN
+F 1 "GND" H 5900 4700 50  0000 C CNN
+F 2 "" H 5900 4850 50  0001 C CNN
+F 3 "" H 5900 4850 50  0001 C CNN
+	1    5900 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4300 5900 4400
+Wire Wire Line
+	5900 4300 5800 4300
+Wire Wire Line
+	5800 4400 5900 4400
+Connection ~ 5900 4400
+Wire Wire Line
+	5900 4500 5800 4500
+Connection ~ 5900 4500
+Wire Wire Line
+	5800 4700 5900 4700
+Connection ~ 5900 4700
+Text HLabel 3650 1800 0    60   Input ~ 0
+3V3_IN
+Wire Wire Line
+	3650 1800 3900 1800
+Wire Wire Line
+	5450 1800 5450 1850
+Wire Wire Line
+	5150 2300 5150 1800
+Connection ~ 5150 1800
+$Comp
+L Device:C C404
+U 1 1 59E6A7D2
+P 5450 2000
+AR Path="/59E6A7D2" Ref="C404"  Part="1" 
+AR Path="/59E6A636/59E6A7D2" Ref="C404"  Part="1" 
+F 0 "C404" H 5475 2100 50  0000 L CNN
+F 1 "47u" H 5475 1900 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_1206" H 5488 1850 50  0001 C CNN
+F 3 "" H 5450 2000 50  0001 C CNN
+F 4 "C1206C476M9PACTU" H 5450 2000 60  0001 C CNN "MPN"
+	1    5450 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 59E6A7EF
+P 5450 2200
+F 0 "#PWR015" H 5450 1950 50  0001 C CNN
+F 1 "GND" H 5450 2050 50  0000 C CNN
+F 2 "" H 5450 2200 50  0001 C CNN
+F 3 "" H 5450 2200 50  0001 C CNN
+	1    5450 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2150 5450 2200
+$Comp
+L Device:R R401
+U 1 1 59E6A875
+P 3900 2200
+F 0 "R401" V 3980 2200 50  0000 C CNN
+F 1 "10k" V 3900 2200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 3830 2200 50  0001 C CNN
+F 3 "" H 3900 2200 50  0001 C CNN
+	1    3900 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2600 3900 2600
+Wire Wire Line
+	3900 2350 3900 2600
+Connection ~ 3900 2600
+Wire Wire Line
+	3900 2050 3900 1800
+Connection ~ 3900 1800
+$Comp
+L Device:C C403
+U 1 1 59E6A905
+P 3900 2850
+AR Path="/59E6A905" Ref="C403"  Part="1" 
+AR Path="/59E6A636/59E6A905" Ref="C403"  Part="1" 
+F 0 "C403" H 3925 2950 50  0000 L CNN
+F 1 "1u" H 3925 2750 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_0805" H 3938 2700 50  0001 C CNN
+F 3 "" H 3900 2850 50  0001 C CNN
+F 4 "C0805C105K3PACTU" H 3900 2850 60  0001 C CNN "MPN"
+	1    3900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 59E6A979
+P 3900 3050
+F 0 "#PWR016" H 3900 2800 50  0001 C CNN
+F 1 "GND" H 3900 2900 50  0000 C CNN
+F 2 "" H 3900 3050 50  0001 C CNN
+F 3 "" H 3900 3050 50  0001 C CNN
+	1    3900 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3050 3900 3000
+Text HLabel 5950 2800 2    60   Input ~ 0
+TXD
+Text HLabel 5950 2900 2    60   Input ~ 0
+RXD
+Wire Wire Line
+	5950 2900 5800 2900
+Wire Wire Line
+	5800 2800 5950 2800
+NoConn ~ 5800 3100
+Text HLabel 7500 3200 0    60   Input ~ 0
+BATTV
+Wire Wire Line
+	6850 3800 8300 3800
+$Comp
+L Device:R R402
+U 1 1 59E6EB66
+P 8300 3600
+F 0 "R402" V 8380 3600 50  0000 C CNN
+F 1 "10k" V 8300 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 8230 3600 50  0001 C CNN
+F 3 "" H 8300 3600 50  0001 C CNN
+	1    8300 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R403
+U 1 1 59E6EB8E
+P 8300 4000
+F 0 "R403" V 8380 4000 50  0000 C CNN
+F 1 "10k" V 8300 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 8230 4000 50  0001 C CNN
+F 3 "" H 8300 4000 50  0001 C CNN
+	1    8300 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3200 8200 3200
+Wire Wire Line
+	8300 3750 8300 3800
+Connection ~ 8300 3800
+$Comp
+L power:GND #PWR017
+U 1 1 59E6EC24
+P 8300 4200
+F 0 "#PWR017" H 8300 3950 50  0001 C CNN
+F 1 "GND" H 8300 4050 50  0000 C CNN
+F 2 "" H 8300 4200 50  0001 C CNN
+F 3 "" H 8300 4200 50  0001 C CNN
+	1    8300 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 4200 8300 4150
+$Comp
+L Device:Q_PMOS_GSD Q402
+U 1 1 59E703AF
+P 8000 3300
+F 0 "Q402" H 8200 3350 50  0000 L CNN
+F 1 "AO3401" H 8200 3250 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8200 3400 50  0001 C CNN
+F 3 "" H 8000 3300 50  0001 C CNN
+	1    8000 3300
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R404
+U 1 1 59E70433
+P 7700 3400
+F 0 "R404" V 7780 3400 50  0000 C CNN
+F 1 "10k" V 7700 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7630 3400 50  0001 C CNN
+F 3 "" H 7700 3400 50  0001 C CNN
+	1    7700 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3600 7150 3600
+Text HLabel 3450 3700 0    60   Output ~ 0
+KEEPALIVE
+Wire Wire Line
+	4350 3700 3450 3700
+$Comp
+L ws2812:5050_Serial_RGB U402
+U 1 1 59E8024A
+P 7200 2250
+AR Path="/59E8024A" Ref="U402"  Part="1" 
+AR Path="/59E6A636/59E8024A" Ref="U402"  Part="1" 
+F 0 "U402" H 7000 2650 60  0000 C CNN
+F 1 "5050_Serial_RGB" H 7200 1850 60  0000 C CNN
+F 2 "LEDs:LED_WS2812B-PLCC4" H 7200 2150 60  0001 C CNN
+F 3 "" H 7200 2150 60  0001 C CNN
+	1    7200 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 59E80397
+P 6650 2550
+F 0 "#PWR018" H 6650 2300 50  0001 C CNN
+F 1 "GND" H 6650 2400 50  0000 C CNN
+F 2 "" H 6650 2550 50  0001 C CNN
+F 3 "" H 6650 2550 50  0001 C CNN
+	1    6650 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2550 6650 2450
+Wire Wire Line
+	6650 2450 6750 2450
+Wire Wire Line
+	6050 2050 6250 2050
+Wire Wire Line
+	6750 2250 6050 2250
+Wire Wire Line
+	6050 2250 6050 2600
+Wire Wire Line
+	6050 2600 5800 2600
+NoConn ~ 7650 2250
+Wire Wire Line
+	6050 1800 6050 2050
+Connection ~ 5450 1800
+Wire Wire Line
+	6400 2850 6300 2850
+Wire Wire Line
+	6300 2850 6300 2700
+Wire Wire Line
+	6300 2700 5800 2700
+Wire Wire Line
+	6400 2950 6300 2950
+Wire Wire Line
+	6300 2950 6300 3000
+Wire Wire Line
+	6300 3000 5800 3000
+Wire Wire Line
+	6400 3150 6350 3150
+Wire Wire Line
+	6350 3150 6350 3250
+Wire Wire Line
+	6250 2050 6250 3050
+Wire Wire Line
+	6250 3050 6400 3050
+Connection ~ 6250 2050
+$Comp
+L power:GND #PWR019
+U 1 1 59E89676
+P 6350 3250
+F 0 "#PWR019" H 6350 3000 50  0001 C CNN
+F 1 "GND" H 6350 3100 50  0000 C CNN
+F 2 "" H 6350 3250 50  0001 C CNN
+F 3 "" H 6350 3250 50  0001 C CNN
+	1    6350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J402
+U 1 1 59E89A66
+P 6600 2950
+F 0 "J402" H 6600 3250 50  0000 C CNN
+F 1 "CONN_01X05" V 6700 2950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 6600 2950 50  0001 C CNN
+F 3 "" H 6600 2950 50  0001 C CNN
+	1    6600 2950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4350 4700 3900 4700
+Wire Wire Line
+	6400 2750 6350 2750
+Text Label 6350 2750 0    60   ~ 0
+IO2
+Text Label 3900 4700 0    60   ~ 0
+IO2
+Text Notes 6300 1800 0    60   ~ 0
+TODO: Better mark 5-pin header on board\nand clean up wiring here.
+Text Notes 2250 3000 0    60   ~ 0
+RC circuit adds an 0.01s delay\nfor power supply to be stable
+NoConn ~ 4350 2700
+NoConn ~ 4350 2800
+NoConn ~ 4350 2900
+NoConn ~ 4350 3000
+NoConn ~ 4350 3100
+NoConn ~ 4350 3200
+NoConn ~ 4350 3300
+NoConn ~ 4350 3400
+NoConn ~ 4350 3500
+NoConn ~ 4350 3900
+NoConn ~ 4350 4000
+NoConn ~ 4350 4100
+NoConn ~ 4350 4200
+NoConn ~ 4350 4600
+NoConn ~ 4350 4500
+NoConn ~ 4350 4400
+NoConn ~ 4350 4300
+NoConn ~ 5800 3500
+Text HLabel 3450 3600 0    60   Input ~ 0
+BUTTON_PRESSED
+Wire Wire Line
+	4350 3600 3450 3600
+Text Notes 2400 3500 0    60   ~ 0
+Use internal pullup on IO14
+$Comp
+L Device:D_Schottky D401
+U 1 1 5A0A3B5E
+P 7300 3600
+F 0 "D401" H 7300 3700 50  0000 C CNN
+F 1 "B5819W" H 7300 3500 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 7300 3600 50  0001 C CNN
+F 3 "" H 7300 3600 50  0001 C CNN
+F 4 "B5819WS-TP" H 7300 3600 60  0001 C CNN "MPN"
+	1    7300 3600
+	1    0    0    -1  
+$EndComp
+Text Notes 2000 2150 0    60   ~ 0
+Estimated power budget is about\n180mA peak while operating.
+Wire Wire Line
+	7500 3200 7700 3200
+Wire Wire Line
+	7700 3200 7700 3250
+Connection ~ 7700 3200
+Wire Wire Line
+	7700 3550 7700 3600
+Wire Wire Line
+	7450 3600 7700 3600
+Wire Wire Line
+	8000 3600 8000 3500
+Connection ~ 7700 3600
+Wire Wire Line
+	8300 3450 8300 3200
+Wire Wire Line
+	6850 3800 6850 3700
+Wire Wire Line
+	6850 3700 5800 3700
+Text Notes 8500 3600 0    60   ~ 0
+Another level shifter, this\ntime to enable reading the\nraw battery voltage (div 2).
+$Comp
+L Connector_Generic:Conn_01x03 J403
+U 1 1 5A0CC856
+P 6100 3300
+AR Path="/5A0CC856" Ref="J403"  Part="1" 
+AR Path="/59E6A636/5A0CC856" Ref="J403"  Part="1" 
+F 0 "J403" H 6100 3500 50  0000 C CNN
+F 1 "CONN_01X03" V 6200 3300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 6100 3300 50  0001 C CNN
+F 3 "" H 6100 3300 50  0001 C CNN
+	1    6100 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3200 5800 3200
+Wire Wire Line
+	5900 3300 5800 3300
+Wire Wire Line
+	5900 3400 5800 3400
+Wire Wire Line
+	5900 4400 5900 4500
+Wire Wire Line
+	5900 4500 5900 4700
+Wire Wire Line
+	5900 4700 5900 4850
+Wire Wire Line
+	5150 1800 5450 1800
+Wire Wire Line
+	3900 2600 4350 2600
+Wire Wire Line
+	3900 2600 3900 2700
+Wire Wire Line
+	3900 1800 5150 1800
+Wire Wire Line
+	8300 3800 8300 3850
+Wire Wire Line
+	5450 1800 6050 1800
+Wire Wire Line
+	6250 2050 6750 2050
+Wire Wire Line
+	7700 3200 7800 3200
+Wire Wire Line
+	7700 3600 8000 3600
+$EndSCHEMATC

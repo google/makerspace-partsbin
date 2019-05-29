@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 """
 Fixes paths used in fp-lib-table and *.pro to be relative, not escaping
 the git tree.
@@ -7,13 +7,14 @@ Exit status is:
     0 = no diffs
     1 = diffs
 """
+from __future__ import print_function
 
 import sys
 import os.path
 import re
 import difflib
 
-URI_LINE_RE = re.compile(r'\(uri (/[^\)]+)\)')
+URI_LINE_RE = re.compile(br'\(uri (/[^\)]+)\)')
 
 
 def diff(f1, f2):
@@ -65,20 +66,20 @@ def fix_pro(filename, fix):
     with open(filename, 'rb') as fo:
         for line in fo:
             line = line.rstrip()
-            if line.startswith('LibName') and '=/' in line:
-                key, value = line.split('=', 1)
+            if line.startswith(b'LibName') and b'=/' in line:
+                key, value = line.split(b'=', 1)
                 value = fix_path(value, filename)
-                line = '%s=%s' % (key, value)
+                line = b'%s=%s' % (key, value)
             new_contents.append(line)
 
-    new_contents.append('')  # Newline at EOF
+    new_contents.append(b'')  # Newline at EOF
 
     with open(filename + '.new', 'wb') as fo:
-        fo.write('\n'.join(new_contents))
+        fo.write(b'\n'.join(new_contents))
     diff_exists = diff(filename, filename + '.new')
     if fix == 2 or diff_exists and fix:
         os.rename(filename + '.new', filename)
-        print "Renamed", filename + '.new'
+        print("Renamed", filename + '.new')
     return diff_exists and 1 or 0
 
 
@@ -90,19 +91,19 @@ def fix_fp_lib(filename, fix):
             line = line.rstrip()
             m = URI_LINE_RE.search(line)
             if m:
-                line = "%s${KIPRJMOD}/%s%s" % (
+                line = b"%s${KIPRJMOD}/%s%s" % (
                     line[:m.start(1)], fix_path(m.group(1), filename),
                     line[m.end(1):])
             new_contents.append(line)
 
-    new_contents.append('')  # Newline at EOF
+    new_contents.append(b'')  # Newline at EOF
 
     with open(filename + '.new', 'wb') as fo:
-        fo.write('\n'.join(new_contents))
+        fo.write(b'\n'.join(new_contents))
     diff_exists = diff(filename, filename + '.new')
     if fix == 2 or diff_exists and fix:
         os.rename(filename + '.new', filename)
-        print "Renamed", filename + '.new'
+        print("Renamed", filename + '.new')
     return diff_exists and 1 or 0
 
 
@@ -120,12 +121,12 @@ def main(filenames):
         for filename in filenames:
             if filename.endswith('.pro'):
                 exit_status |= fix_pro(filename, fix=fix_arg)
-            elif filename.endswith('fp-lib-table'):
+            elif filename.endswith('-lib-table'):
                 exit_status |= fix_fp_lib(filename, fix=fix_arg)
             else:
                 raise ValueError("Unknown type of", filename)
     except Exception as e:
-        print "Error while processing", filename
+        print("Error while processing", filename)
         raise
 
     return exit_status

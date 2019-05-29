@@ -89,7 +89,7 @@ drlwriter.CreateDrillandMapFilesSet( plotDir, genDrl, genMap );
 # time, but we do want its name to be a bit different to show up on top.
 # So this is an ugly hack to rename the drl-file to have a 0 in the beginning.
 base_name = filename[:-10]
-print plotDir + base_name + ".drl"
+print(plotDir + base_name + ".drl")
 os.rename(plotDir + base_name + ".drl", plotDir + base_name + "-0.drl")
 
 # Make it easier to load the resulting Gerbers in Panelizer

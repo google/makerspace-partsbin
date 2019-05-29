@@ -1,0 +1,242 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:switches
+LIBS:esp32
+LIBS:switcher-toppower
+LIBS:ch340
+LIBS:zeropin
+LIBS:stepup_modules
+LIBS:regulators2
+LIBS:ws2812
+LIBS:mcp73831
+LIBS:switcher-suosemi
+LIBS:esp32_button-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "(c) 2017 Google"
+Comment3 "CC-BY 4.0 International"
+Comment4 ""
+$EndDescr
+Text HLabel 2800 2300 0    60   Input ~ 0
+BATT_5V
+Text HLabel 6750 2800 2    60   Output ~ 0
+3V3OUT
+Wire Wire Line
+	3850 2800 5250 2800
+Wire Wire Line
+	5850 2800 6750 2800
+$Comp
+L GND #PWR02
+U 1 1 59E69DC0
+P 5550 3400
+AR Path="/59E66932/59E69DC0" Ref="#PWR02"  Part="1" 
+AR Path="/59EF94E4/59E69DC0" Ref="#PWR04"  Part="1" 
+F 0 "#PWR02" H 5550 3150 50  0001 C CNN
+F 1 "GND" H 5550 3250 50  0000 C CNN
+F 2 "" H 5550 3400 50  0001 C CNN
+F 3 "" H 5550 3400 50  0001 C CNN
+	1    5550 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3400 5550 3100
+$Comp
+L C C201
+U 1 1 59E69DDB
+P 4900 3100
+AR Path="/59E66932/59E69DDB" Ref="C201"  Part="1" 
+AR Path="/59EF94E4/59E69DDB" Ref="C201"  Part="1" 
+F 0 "C201" H 4925 3200 50  0000 L CNN
+F 1 "10u" H 4925 3000 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_1206" H 4938 2950 50  0001 C CNN
+F 3 "" H 4900 3100 50  0001 C CNN
+	1    4900 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C202
+U 1 1 59E69E06
+P 6200 3100
+AR Path="/59E66932/59E69E06" Ref="C202"  Part="1" 
+AR Path="/59EF94E4/59E69E06" Ref="C202"  Part="1" 
+F 0 "C202" H 6225 3200 50  0000 L CNN
+F 1 "10u" H 6225 3000 50  0000 L CNN
+F 2 "Capacitors_SMD_Round:C_1206" H 6238 2950 50  0001 C CNN
+F 3 "" H 6200 3100 50  0001 C CNN
+	1    6200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 59E69E57
+P 6200 3400
+AR Path="/59E66932/59E69E57" Ref="#PWR03"  Part="1" 
+AR Path="/59EF94E4/59E69E57" Ref="#PWR05"  Part="1" 
+F 0 "#PWR03" H 6200 3150 50  0001 C CNN
+F 1 "GND" H 6200 3250 50  0000 C CNN
+F 2 "" H 6200 3400 50  0001 C CNN
+F 3 "" H 6200 3400 50  0001 C CNN
+	1    6200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 59E69E6B
+P 4900 3400
+AR Path="/59E66932/59E69E6B" Ref="#PWR04"  Part="1" 
+AR Path="/59EF94E4/59E69E6B" Ref="#PWR06"  Part="1" 
+F 0 "#PWR04" H 4900 3150 50  0001 C CNN
+F 1 "GND" H 4900 3250 50  0000 C CNN
+F 2 "" H 4900 3400 50  0001 C CNN
+F 3 "" H 4900 3400 50  0001 C CNN
+	1    4900 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3400 4900 3250
+Wire Wire Line
+	4900 2950 4900 2800
+Connection ~ 4900 2800
+Wire Wire Line
+	6200 2950 6200 2800
+Connection ~ 6200 2800
+Wire Wire Line
+	6200 3400 6200 3250
+Text HLabel 2800 2800 0    60   Input ~ 0
+USB_5V
+$Comp
+L Q_PMOS_GSD Q201
+U 1 1 59E88FDF
+P 3300 2400
+AR Path="/59E66932/59E88FDF" Ref="Q201"  Part="1" 
+AR Path="/59EF94E4/59E88FDF" Ref="Q201"  Part="1" 
+F 0 "Q201" H 3500 2450 50  0000 L CNN
+F 1 "AO3401" H 3500 2350 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 3500 2500 50  0001 C CNN
+F 3 "" H 3300 2400 50  0001 C CNN
+	1    3300 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R201
+U 1 1 59E8906C
+P 3300 3100
+AR Path="/59E66932/59E8906C" Ref="R201"  Part="1" 
+AR Path="/59EF94E4/59E8906C" Ref="R201"  Part="1" 
+F 0 "R201" V 3380 3100 50  0000 C CNN
+F 1 "10k" V 3300 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 3230 3100 50  0001 C CNN
+F 3 "" H 3300 3100 50  0001 C CNN
+	1    3300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky D201
+U 1 1 59E890CF
+P 3700 2800
+AR Path="/59E66932/59E890CF" Ref="D201"  Part="1" 
+AR Path="/59EF94E4/59E890CF" Ref="D201"  Part="1" 
+F 0 "D201" H 3700 2900 50  0000 C CNN
+F 1 "B5819W" H 3700 2700 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 3700 2800 50  0001 C CNN
+F 3 "" H 3700 2800 50  0001 C CNN
+	1    3700 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 2300 4150 2300
+Wire Wire Line
+	4150 2150 4150 2800
+Connection ~ 4150 2800
+Wire Wire Line
+	2800 2800 3550 2800
+Wire Wire Line
+	2800 2300 3100 2300
+Wire Wire Line
+	3300 2600 3300 2950
+Connection ~ 3300 2800
+$Comp
+L GND #PWR05
+U 1 1 59E891B1
+P 3300 3400
+AR Path="/59E66932/59E891B1" Ref="#PWR05"  Part="1" 
+AR Path="/59EF94E4/59E891B1" Ref="#PWR07"  Part="1" 
+F 0 "#PWR05" H 3300 3150 50  0001 C CNN
+F 1 "GND" H 3300 3250 50  0000 C CNN
+F 2 "" H 3300 3400 50  0001 C CNN
+F 3 "" H 3300 3400 50  0001 C CNN
+	1    3300 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3400 3300 3250
+$Comp
+L PWR_FLAG #FLG06
+U 1 1 59F05650
+P 4150 2150
+F 0 "#FLG06" H 4150 2225 50  0001 C CNN
+F 1 "PWR_FLAG" H 4150 2300 50  0000 C CNN
+F 2 "" H 4150 2150 50  0001 C CNN
+F 3 "" H 4150 2150 50  0001 C CNN
+	1    4150 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 4150 2300
+$Comp
+L MCP1703A-3302/MB U201
+U 1 1 5A03D169
+P 5550 2800
+F 0 "U201" H 5700 2550 50  0000 C CNN
+F 1 "HT7333A" H 5550 2950 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-89-3" H 5600 3050 50  0001 C CNN
+F 3 "" H 5550 2750 50  0001 C CNN
+	1    5550 2800
+	1    0    0    -1  
+$EndComp
+Text Notes 3200 1750 0    60   ~ 0
+See Microchip AN1149\n(Load Sharing)
+Wire Notes Line
+	3000 1500 3000 3750
+Wire Notes Line
+	3000 3750 4400 3750
+Wire Notes Line
+	4400 3750 4400 1500
+Wire Notes Line
+	4400 1500 3000 1500
+$EndSCHEMATC

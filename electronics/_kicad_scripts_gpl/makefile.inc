@@ -3,7 +3,7 @@
 # Added symlink and ability to run from other tree depths
 
 %-fab.zip : %-fab.kicad_pcb
-	python2 $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))/kicad-fab.py $<
+	python $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))/kicad-fab.py $<
 	# Lines that start with '%TF' are "Gerber extensions" and are not
 	# supported by some software (including the one that allpcb uses).
 	# Be sure to test with both gerbv and gerbview for compatibility problems in
